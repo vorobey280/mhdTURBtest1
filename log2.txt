@@ -1,0 +1,473 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2512                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _87ed40d256-20251219 OPENFOAM=2512 version=v2512
+Arch   : "LSB;label=32;scalar=64"
+Exec   : magnetoHDFoam
+Date   : May 11 2026
+Time   : 00:30:18
+Host   : lilcube
+PID    : 403673
+I/O    : uncollated
+Case   : /home/chizh/OpenFOAM/run/magnetoHD_test/hartmann
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+memory pool : not available
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+
+PIMPLE: Operating solver in PISO mode
+
+
+PISO: Operating solver in PISO mode
+
+
+BPISO: Operating solver in PISO mode
+
+Reading thermophysical properties
+
+Selecting thermodynamics package 
+{
+    type            heRhoThermo;
+    mixture         pureMixture;
+    transport       const;
+    thermo          hConstThermo;
+    equationOfState Boussinesq;
+    specie          specie;
+    energy          sensibleEnthalpy;
+}
+
+
+
+--> FOAM FATAL IO ERROR: (openfoam-2512)
+Unknown fluidThermo type 
+
+Valid fluidThermo types :
+
+236
+(
+heRhoThermo<homogeneousMixture<const<hConst<PengRobinsonGas<specie>>,sensibleEnthalpy>>>
+heRhoThermo<homogeneousMixture<const<hConst<incompressiblePerfectGas<specie>>,sensibleEnthalpy>>>
+heRhoThermo<homogeneousMixture<const<hConst<perfectGas<specie>>,sensibleEnthalpy>>>
+heRhoThermo<homogeneousMixture<sutherland<hConst<PengRobinsonGas<specie>>,sensibleEnthalpy>>>
+heRhoThermo<homogeneousMixture<sutherland<janaf<PengRobinsonGas<specie>>,sensibleEnthalpy>>>
+heRhoThermo<homogeneousMixture<sutherland<janaf<incompressiblePerfectGas<specie>>,sensibleEnthalpy>>>
+heRhoThermo<homogeneousMixture<sutherland<janaf<perfectGas<specie>>,sensibleEnthalpy>>>
+heRhoThermo<inhomogeneousMixture<const<hConst<PengRobinsonGas<specie>>,sensibleEnthalpy>>>
+heRhoThermo<inhomogeneousMixture<const<hConst<incompressiblePerfectGas<specie>>,sensibleEnthalpy>>>
+heRhoThermo<inhomogeneousMixture<const<hConst<perfectGas<specie>>,sensibleEnthalpy>>>
+heRhoThermo<inhomogeneousMixture<sutherland<hConst<PengRobinsonGas<specie>>,sensibleEnthalpy>>>
+heRhoThermo<inhomogeneousMixture<sutherland<janaf<PengRobinsonGas<specie>>,sensibleEnthalpy>>>
+heRhoThermo<inhomogeneousMixture<sutherland<janaf<incompressiblePerfectGas<specie>>,sensibleEnthalpy>>>
+heRhoThermo<inhomogeneousMixture<sutherland<janaf<perfectGas<specie>>,sensibleEnthalpy>>>
+heRhoThermo<multiComponentMixture<const<eConst<adiabaticPerfectFluid<specie>>,sensibleInternalEnergy>>>
+heRhoThermo<multiComponentMixture<const<eConst<incompressiblePerfectGas<specie>>,sensibleInternalEnergy>>>
+heRhoThermo<multiComponentMixture<const<eConst<perfectFluid<specie>>,sensibleInternalEnergy>>>
+heRhoThermo<multiComponentMixture<const<eConst<perfectGas<specie>>,sensibleInternalEnergy>>>
+heRhoThermo<multiComponentMixture<const<eConst<rhoConst<specie>>,sensibleInternalEnergy>>>
+heRhoThermo<multiComponentMixture<const<hConst<adiabaticPerfectFluid<specie>>,sensibleEnthalpy>>>
+heRhoThermo<multiComponentMixture<const<hConst<incompressiblePerfectGas<specie>>,sensibleEnthalpy>>>
+heRhoThermo<multiComponentMixture<const<hConst<perfectFluid<specie>>,sensibleEnthalpy>>>
+heRhoThermo<multiComponentMixture<const<hConst<perfectGas<specie>>,sensibleEnthalpy>>>
+heRhoThermo<multiComponentMixture<const<hConst<rhoConst<specie>>,sensibleEnthalpy>>>
+heRhoThermo<multiComponentMixture<polynomial<hPolynomial<icoPolynomial<specie>>,sensibleEnthalpy>>>
+heRhoThermo<multiComponentMixture<polynomial<hPolynomial<icoPolynomial<specie>>,sensibleInternalEnergy>>>
+heRhoThermo<multiComponentMixture<polynomial<janaf<perfectGas<specie>>,sensibleEnthalpy>>>
+heRhoThermo<multiComponentMixture<polynomial<janaf<perfectGas<specie>>,sensibleInternalEnergy>>>
+heRhoThermo<multiComponentMixture<sutherland<janaf<incompressiblePerfectGas<specie>>,sensibleEnthalpy>>>
+heRhoThermo<multiComponentMixture<sutherland<janaf<incompressiblePerfectGas<specie>>,sensibleInternalEnergy>>>
+heRhoThermo<multiComponentMixture<sutherland<janaf<perfectGas<specie>>,sensibleEnthalpy>>>
+heRhoThermo<multiComponentMixture<sutherland<janaf<perfectGas<specie>>,sensibleInternalEnergy>>>
+heRhoThermo<pureMixture<WLF<eConst<rhoConst<specie>>,sensibleInternalEnergy>>>
+heRhoThermo<pureMixture<const<eConst<adiabaticPerfectFluid<specie>>,sensibleInternalEnergy>>>
+heRhoThermo<pureMixture<const<eConst<perfectFluid<specie>>,sensibleInternalEnergy>>>
+heRhoThermo<pureMixture<const<eConst<perfectGas<specie>>,sensibleInternalEnergy>>>
+heRhoThermo<pureMixture<const<eConst<rPolynomial<specie>>,sensibleInternalEnergy>>>
+heRhoThermo<pureMixture<const<eConst<rhoConst<specie>>,sensibleInternalEnergy>>>
+heRhoThermo<pureMixture<const<hConst<Boussinesq<specie>>,sensibleEnthalpy>>>
+heRhoThermo<pureMixture<const<hConst<Boussinesq<specie>>,sensibleInternalEnergy>>>
+heRhoThermo<pureMixture<const<hConst<adiabaticPerfectFluid<specie>>,sensibleEnthalpy>>>
+heRhoThermo<pureMixture<const<hConst<adiabaticPerfectFluid<specie>>,sensibleInternalEnergy>>>
+heRhoThermo<pureMixture<const<hConst<icoTabulated<specie>>,sensibleEnthalpy>>>
+heRhoThermo<pureMixture<const<hConst<incompressiblePerfectGas<specie>>,sensibleEnthalpy>>>
+heRhoThermo<pureMixture<const<hConst<incompressiblePerfectGas<specie>>,sensibleInternalEnergy>>>
+heRhoThermo<pureMixture<const<hConst<perfectFluid<specie>>,sensibleEnthalpy>>>
+heRhoThermo<pureMixture<const<hConst<perfectFluid<specie>>,sensibleInternalEnergy>>>
+heRhoThermo<pureMixture<const<hConst<perfectGas<specie>>,sensibleEnthalpy>>>
+heRhoThermo<pureMixture<const<hConst<perfectGas<specie>>,sensibleInternalEnergy>>>
+heRhoThermo<pureMixture<const<hConst<rPolynomial<specie>>,sensibleEnthalpy>>>
+heRhoThermo<pureMixture<const<hConst<rPolynomial<specie>>,sensibleInternalEnergy>>>
+heRhoThermo<pureMixture<const<hConst<rhoConst<specie>>,sensibleEnthalpy>>>
+heRhoThermo<pureMixture<const<hConst<rhoConst<specie>>,sensibleInternalEnergy>>>
+heRhoThermo<pureMixture<liquid,sensibleEnthalpy>>
+heRhoThermo<pureMixture<liquid,sensibleInternalEnergy>>
+heRhoThermo<pureMixture<polynomial<hPolynomial<PengRobinsonGas<specie>>,sensibleEnthalpy>>>
+heRhoThermo<pureMixture<polynomial<hPolynomial<icoPolynomial<specie>>,sensibleEnthalpy>>>
+heRhoThermo<pureMixture<polynomial<hPolynomial<icoPolynomial<specie>>,sensibleInternalEnergy>>>
+heRhoThermo<pureMixture<polynomial<hPolynomial<icoTabulated<specie>>,sensibleEnthalpy>>>
+heRhoThermo<pureMixture<polynomial<hPolynomial<icoTabulated<specie>>,sensibleInternalEnergy>>>
+heRhoThermo<pureMixture<polynomial<hPolynomial<incompressiblePerfectGas<specie>>,sensibleEnthalpy>>>
+heRhoThermo<pureMixture<polynomial<hPolynomial<perfectGas<specie>>,sensibleEnthalpy>>>
+heRhoThermo<pureMixture<polynomial<hPolynomial<rPolynomial<specie>>,sensibleEnthalpy>>>
+heRhoThermo<pureMixture<polynomial<janaf<PengRobinsonGas<specie>>,sensibleEnthalpy>>>
+heRhoThermo<pureMixture<sutherland<hConst<Boussinesq<specie>>,sensibleEnthalpy>>>
+heRhoThermo<pureMixture<sutherland<hConst<Boussinesq<specie>>,sensibleInternalEnergy>>>
+heRhoThermo<pureMixture<sutherland<hConst<PengRobinsonGas<specie>>,sensibleEnthalpy>>>
+heRhoThermo<pureMixture<sutherland<hConst<icoTabulated<specie>>,sensibleEnthalpy>>>
+heRhoThermo<pureMixture<sutherland<hConst<icoTabulated<specie>>,sensibleInternalEnergy>>>
+heRhoThermo<pureMixture<sutherland<hConst<incompressiblePerfectGas<specie>>,sensibleEnthalpy>>>
+heRhoThermo<pureMixture<sutherland<hConst<incompressiblePerfectGas<specie>>,sensibleInternalEnergy>>>
+heRhoThermo<pureMixture<sutherland<hConst<perfectGas<specie>>,sensibleEnthalpy>>>
+heRhoThermo<pureMixture<sutherland<hConst<perfectGas<specie>>,sensibleInternalEnergy>>>
+heRhoThermo<pureMixture<sutherland<janaf<Boussinesq<specie>>,sensibleEnthalpy>>>
+heRhoThermo<pureMixture<sutherland<janaf<Boussinesq<specie>>,sensibleInternalEnergy>>>
+heRhoThermo<pureMixture<sutherland<janaf<icoTabulated<specie>>,sensibleEnthalpy>>>
+heRhoThermo<pureMixture<sutherland<janaf<icoTabulated<specie>>,sensibleInternalEnergy>>>
+heRhoThermo<pureMixture<sutherland<janaf<incompressiblePerfectGas<specie>>,sensibleEnthalpy>>>
+heRhoThermo<pureMixture<sutherland<janaf<incompressiblePerfectGas<specie>>,sensibleInternalEnergy>>>
+heRhoThermo<pureMixture<sutherland<janaf<perfectGas<specie>>,sensibleEnthalpy>>>
+heRhoThermo<pureMixture<sutherland<janaf<perfectGas<specie>>,sensibleInternalEnergy>>>
+heRhoThermo<pureMixture<tabulated<hPolynomial<icoPolynomial<specie>>,sensibleEnthalpy>>>
+heRhoThermo<pureMixture<tabulated<hPolynomial<icoPolynomial<specie>>,sensibleInternalEnergy>>>
+heRhoThermo<pureMixture<tabulated<hTabulated<icoTabulated<specie>>,sensibleEnthalpy>>>
+heRhoThermo<pureMixture<tabulated<hTabulated<icoTabulated<specie>>,sensibleInternalEnergy>>>
+heRhoThermo<pureMixture<tabulated<hTabulated<perfectGas<specie>>,sensibleEnthalpy>>>
+heRhoThermo<pureMixture<tabulated<janaf<icoTabulated<specie>>,sensibleEnthalpy>>>
+heRhoThermo<pureZoneMixture<WLF<eConst<rhoConst<specie>>,sensibleInternalEnergy>>>
+heRhoThermo<pureZoneMixture<const<eConst<adiabaticPerfectFluid<specie>>,sensibleInternalEnergy>>>
+heRhoThermo<pureZoneMixture<const<eConst<perfectFluid<specie>>,sensibleInternalEnergy>>>
+heRhoThermo<pureZoneMixture<const<eConst<perfectGas<specie>>,sensibleInternalEnergy>>>
+heRhoThermo<pureZoneMixture<const<eConst<rPolynomial<specie>>,sensibleInternalEnergy>>>
+heRhoThermo<pureZoneMixture<const<eConst<rhoConst<specie>>,sensibleInternalEnergy>>>
+heRhoThermo<pureZoneMixture<const<hConst<Boussinesq<specie>>,sensibleEnthalpy>>>
+heRhoThermo<pureZoneMixture<const<hConst<Boussinesq<specie>>,sensibleInternalEnergy>>>
+heRhoThermo<pureZoneMixture<const<hConst<adiabaticPerfectFluid<specie>>,sensibleEnthalpy>>>
+heRhoThermo<pureZoneMixture<const<hConst<adiabaticPerfectFluid<specie>>,sensibleInternalEnergy>>>
+heRhoThermo<pureZoneMixture<const<hConst<icoTabulated<specie>>,sensibleEnthalpy>>>
+heRhoThermo<pureZoneMixture<const<hConst<incompressiblePerfectGas<specie>>,sensibleEnthalpy>>>
+heRhoThermo<pureZoneMixture<const<hConst<incompressiblePerfectGas<specie>>,sensibleInternalEnergy>>>
+heRhoThermo<pureZoneMixture<const<hConst<perfectFluid<specie>>,sensibleEnthalpy>>>
+heRhoThermo<pureZoneMixture<const<hConst<perfectFluid<specie>>,sensibleInternalEnergy>>>
+heRhoThermo<pureZoneMixture<const<hConst<perfectGas<specie>>,sensibleEnthalpy>>>
+heRhoThermo<pureZoneMixture<const<hConst<perfectGas<specie>>,sensibleInternalEnergy>>>
+heRhoThermo<pureZoneMixture<const<hConst<rPolynomial<specie>>,sensibleEnthalpy>>>
+heRhoThermo<pureZoneMixture<const<hConst<rPolynomial<specie>>,sensibleInternalEnergy>>>
+heRhoThermo<pureZoneMixture<const<hConst<rhoConst<specie>>,sensibleEnthalpy>>>
+heRhoThermo<pureZoneMixture<const<hConst<rhoConst<specie>>,sensibleInternalEnergy>>>
+heRhoThermo<pureZoneMixture<polynomial<hPolynomial<PengRobinsonGas<specie>>,sensibleEnthalpy>>>
+heRhoThermo<pureZoneMixture<polynomial<hPolynomial<icoPolynomial<specie>>,sensibleEnthalpy>>>
+heRhoThermo<pureZoneMixture<polynomial<hPolynomial<icoPolynomial<specie>>,sensibleInternalEnergy>>>
+heRhoThermo<pureZoneMixture<polynomial<hPolynomial<icoTabulated<specie>>,sensibleEnthalpy>>>
+heRhoThermo<pureZoneMixture<polynomial<hPolynomial<icoTabulated<specie>>,sensibleInternalEnergy>>>
+heRhoThermo<pureZoneMixture<polynomial<hPolynomial<incompressiblePerfectGas<specie>>,sensibleEnthalpy>>>
+heRhoThermo<pureZoneMixture<polynomial<hPolynomial<perfectGas<specie>>,sensibleEnthalpy>>>
+heRhoThermo<pureZoneMixture<polynomial<hPolynomial<rPolynomial<specie>>,sensibleEnthalpy>>>
+heRhoThermo<pureZoneMixture<polynomial<janaf<PengRobinsonGas<specie>>,sensibleEnthalpy>>>
+heRhoThermo<pureZoneMixture<sutherland<hConst<Boussinesq<specie>>,sensibleEnthalpy>>>
+heRhoThermo<pureZoneMixture<sutherland<hConst<Boussinesq<specie>>,sensibleInternalEnergy>>>
+heRhoThermo<pureZoneMixture<sutherland<hConst<PengRobinsonGas<specie>>,sensibleEnthalpy>>>
+heRhoThermo<pureZoneMixture<sutherland<hConst<icoTabulated<specie>>,sensibleEnthalpy>>>
+heRhoThermo<pureZoneMixture<sutherland<hConst<icoTabulated<specie>>,sensibleInternalEnergy>>>
+heRhoThermo<pureZoneMixture<sutherland<hConst<incompressiblePerfectGas<specie>>,sensibleEnthalpy>>>
+heRhoThermo<pureZoneMixture<sutherland<hConst<incompressiblePerfectGas<specie>>,sensibleInternalEnergy>>>
+heRhoThermo<pureZoneMixture<sutherland<hConst<perfectGas<specie>>,sensibleEnthalpy>>>
+heRhoThermo<pureZoneMixture<sutherland<hConst<perfectGas<specie>>,sensibleInternalEnergy>>>
+heRhoThermo<pureZoneMixture<sutherland<janaf<Boussinesq<specie>>,sensibleEnthalpy>>>
+heRhoThermo<pureZoneMixture<sutherland<janaf<Boussinesq<specie>>,sensibleInternalEnergy>>>
+heRhoThermo<pureZoneMixture<sutherland<janaf<icoTabulated<specie>>,sensibleEnthalpy>>>
+heRhoThermo<pureZoneMixture<sutherland<janaf<icoTabulated<specie>>,sensibleInternalEnergy>>>
+heRhoThermo<pureZoneMixture<sutherland<janaf<incompressiblePerfectGas<specie>>,sensibleEnthalpy>>>
+heRhoThermo<pureZoneMixture<sutherland<janaf<incompressiblePerfectGas<specie>>,sensibleInternalEnergy>>>
+heRhoThermo<pureZoneMixture<sutherland<janaf<perfectGas<specie>>,sensibleEnthalpy>>>
+heRhoThermo<pureZoneMixture<sutherland<janaf<perfectGas<specie>>,sensibleInternalEnergy>>>
+heRhoThermo<pureZoneMixture<tabulated<hPolynomial<icoPolynomial<specie>>,sensibleEnthalpy>>>
+heRhoThermo<pureZoneMixture<tabulated<hPolynomial<icoPolynomial<specie>>,sensibleInternalEnergy>>>
+heRhoThermo<pureZoneMixture<tabulated<hTabulated<icoTabulated<specie>>,sensibleEnthalpy>>>
+heRhoThermo<pureZoneMixture<tabulated<hTabulated<icoTabulated<specie>>,sensibleInternalEnergy>>>
+heRhoThermo<pureZoneMixture<tabulated<hTabulated<perfectGas<specie>>,sensibleEnthalpy>>>
+heRhoThermo<pureZoneMixture<tabulated<janaf<icoTabulated<specie>>,sensibleEnthalpy>>>
+heRhoThermo<reactingMixture<const<eConst<adiabaticPerfectFluid<specie>>,sensibleInternalEnergy>>>
+heRhoThermo<reactingMixture<const<eConst<incompressiblePerfectGas<specie>>,sensibleInternalEnergy>>>
+heRhoThermo<reactingMixture<const<eConst<perfectFluid<specie>>,sensibleInternalEnergy>>>
+heRhoThermo<reactingMixture<const<eConst<perfectGas<specie>>,sensibleInternalEnergy>>>
+heRhoThermo<reactingMixture<const<eConst<rhoConst<specie>>,sensibleInternalEnergy>>>
+heRhoThermo<reactingMixture<const<hConst<adiabaticPerfectFluid<specie>>,sensibleEnthalpy>>>
+heRhoThermo<reactingMixture<const<hConst<incompressiblePerfectGas<specie>>,sensibleEnthalpy>>>
+heRhoThermo<reactingMixture<const<hConst<perfectFluid<specie>>,sensibleEnthalpy>>>
+heRhoThermo<reactingMixture<const<hConst<perfectGas<specie>>,sensibleEnthalpy>>>
+heRhoThermo<reactingMixture<const<hConst<rhoConst<specie>>,sensibleEnthalpy>>>
+heRhoThermo<reactingMixture<polynomial<hPolynomial<icoPolynomial<specie>>,sensibleEnthalpy>>>
+heRhoThermo<reactingMixture<polynomial<hPolynomial<icoPolynomial<specie>>,sensibleInternalEnergy>>>
+heRhoThermo<reactingMixture<sutherland<janaf<PengRobinsonGas<specie>>,sensibleEnthalpy>>>
+heRhoThermo<reactingMixture<sutherland<janaf<PengRobinsonGas<specie>>,sensibleInternalEnergy>>>
+heRhoThermo<reactingMixture<sutherland<janaf<incompressiblePerfectGas<specie>>,sensibleEnthalpy>>>
+heRhoThermo<reactingMixture<sutherland<janaf<incompressiblePerfectGas<specie>>,sensibleInternalEnergy>>>
+heRhoThermo<reactingMixture<sutherland<janaf<perfectGas<specie>>,sensibleEnthalpy>>>
+heRhoThermo<reactingMixture<sutherland<janaf<perfectGas<specie>>,sensibleInternalEnergy>>>
+heRhoThermo<singleStepReactingMixture<sutherland<janaf<perfectGas<specie>>,sensibleEnthalpy>>>
+heRhoThermo<singleStepReactingMixture<sutherland<janaf<perfectGas<specie>>,sensibleInternalEnergy>>>
+heRhoThermo<veryInhomogeneousMixture<const<hConst<PengRobinsonGas<specie>>,sensibleEnthalpy>>>
+heRhoThermo<veryInhomogeneousMixture<const<hConst<incompressiblePerfectGas<specie>>,sensibleEnthalpy>>>
+heRhoThermo<veryInhomogeneousMixture<const<hConst<perfectGas<specie>>,sensibleEnthalpy>>>
+heRhoThermo<veryInhomogeneousMixture<sutherland<hConst<PengRobinsonGas<specie>>,sensibleEnthalpy>>>
+heRhoThermo<veryInhomogeneousMixture<sutherland<janaf<PengRobinsonGas<specie>>,sensibleEnthalpy>>>
+heRhoThermo<veryInhomogeneousMixture<sutherland<janaf<incompressiblePerfectGas<specie>>,sensibleEnthalpy>>>
+heRhoThermo<veryInhomogeneousMixture<sutherland<janaf<perfectGas<specie>>,sensibleEnthalpy>>>
+
+)
+
+type            mixture                    transport   thermo       equationOfState           specie  energy                  
+
+hePsiThermo     homogeneousMixture         const       hConst       PengRobinsonGas           specie  sensibleEnthalpy        
+hePsiThermo     homogeneousMixture         const       hConst       perfectGas                specie  sensibleEnthalpy        
+hePsiThermo     homogeneousMixture         sutherland  hConst       PengRobinsonGas           specie  sensibleEnthalpy        
+hePsiThermo     homogeneousMixture         sutherland  hConst       perfectGas                specie  sensibleEnthalpy        
+hePsiThermo     homogeneousMixture         sutherland  janaf        PengRobinsonGas           specie  sensibleEnthalpy        
+hePsiThermo     homogeneousMixture         sutherland  janaf        perfectGas                specie  sensibleEnthalpy        
+hePsiThermo     inhomogeneousMixture       const       hConst       PengRobinsonGas           specie  sensibleEnthalpy        
+hePsiThermo     inhomogeneousMixture       const       hConst       perfectGas                specie  sensibleEnthalpy        
+hePsiThermo     inhomogeneousMixture       sutherland  hConst       PengRobinsonGas           specie  sensibleEnthalpy        
+hePsiThermo     inhomogeneousMixture       sutherland  hConst       perfectGas                specie  sensibleEnthalpy        
+hePsiThermo     inhomogeneousMixture       sutherland  janaf        PengRobinsonGas           specie  sensibleEnthalpy        
+hePsiThermo     inhomogeneousMixture       sutherland  janaf        perfectGas                specie  sensibleEnthalpy        
+hePsiThermo     multiComponentMixture      const       eConst       perfectGas                specie  sensibleInternalEnergy  
+hePsiThermo     multiComponentMixture      const       hConst       perfectGas                specie  sensibleEnthalpy        
+hePsiThermo     multiComponentMixture      sutherland  janaf        perfectGas                specie  sensibleEnthalpy        
+hePsiThermo     multiComponentMixture      sutherland  janaf        perfectGas                specie  sensibleInternalEnergy  
+hePsiThermo     pureMixture                const       eConst       perfectGas                specie  sensibleInternalEnergy  
+hePsiThermo     pureMixture                const       hConst       perfectGas                specie  sensibleEnthalpy        
+hePsiThermo     pureMixture                const       hConst       perfectGas                specie  sensibleInternalEnergy  
+hePsiThermo     pureMixture                polynomial  hPolynomial  PengRobinsonGas           specie  sensibleEnthalpy        
+hePsiThermo     pureMixture                polynomial  janaf        PengRobinsonGas           specie  sensibleEnthalpy        
+hePsiThermo     pureMixture                sutherland  eConst       perfectGas                specie  sensibleInternalEnergy  
+hePsiThermo     pureMixture                sutherland  hConst       PengRobinsonGas           specie  sensibleEnthalpy        
+hePsiThermo     pureMixture                sutherland  hConst       perfectGas                specie  sensibleEnthalpy        
+hePsiThermo     pureMixture                sutherland  hConst       perfectGas                specie  sensibleInternalEnergy  
+hePsiThermo     pureMixture                sutherland  janaf        PengRobinsonGas           specie  sensibleEnthalpy        
+hePsiThermo     pureMixture                sutherland  janaf        PengRobinsonGas           specie  sensibleInternalEnergy  
+hePsiThermo     pureMixture                sutherland  janaf        perfectGas                specie  sensibleEnthalpy        
+hePsiThermo     pureMixture                sutherland  janaf        perfectGas                specie  sensibleInternalEnergy  
+hePsiThermo     pureZoneMixture            const       eConst       perfectGas                specie  sensibleInternalEnergy  
+hePsiThermo     pureZoneMixture            const       hConst       perfectGas                specie  sensibleEnthalpy        
+hePsiThermo     pureZoneMixture            const       hConst       perfectGas                specie  sensibleInternalEnergy  
+hePsiThermo     pureZoneMixture            polynomial  hPolynomial  PengRobinsonGas           specie  sensibleEnthalpy        
+hePsiThermo     pureZoneMixture            polynomial  janaf        PengRobinsonGas           specie  sensibleEnthalpy        
+hePsiThermo     pureZoneMixture            sutherland  eConst       perfectGas                specie  sensibleInternalEnergy  
+hePsiThermo     pureZoneMixture            sutherland  hConst       PengRobinsonGas           specie  sensibleEnthalpy        
+hePsiThermo     pureZoneMixture            sutherland  hConst       perfectGas                specie  sensibleEnthalpy        
+hePsiThermo     pureZoneMixture            sutherland  hConst       perfectGas                specie  sensibleInternalEnergy  
+hePsiThermo     pureZoneMixture            sutherland  janaf        PengRobinsonGas           specie  sensibleEnthalpy        
+hePsiThermo     pureZoneMixture            sutherland  janaf        PengRobinsonGas           specie  sensibleInternalEnergy  
+hePsiThermo     pureZoneMixture            sutherland  janaf        perfectGas                specie  sensibleEnthalpy        
+hePsiThermo     pureZoneMixture            sutherland  janaf        perfectGas                specie  sensibleInternalEnergy  
+hePsiThermo     reactingMixture            const       eConst       perfectGas                specie  sensibleInternalEnergy  
+hePsiThermo     reactingMixture            const       hConst       perfectGas                specie  sensibleEnthalpy        
+hePsiThermo     reactingMixture            sutherland  janaf        PengRobinsonGas           specie  sensibleEnthalpy        
+hePsiThermo     reactingMixture            sutherland  janaf        PengRobinsonGas           specie  sensibleInternalEnergy  
+hePsiThermo     reactingMixture            sutherland  janaf        perfectGas                specie  sensibleEnthalpy        
+hePsiThermo     reactingMixture            sutherland  janaf        perfectGas                specie  sensibleInternalEnergy  
+hePsiThermo     singleStepReactingMixture  sutherland  janaf        perfectGas                specie  sensibleEnthalpy        
+hePsiThermo     singleStepReactingMixture  sutherland  janaf        perfectGas                specie  sensibleInternalEnergy  
+hePsiThermo     veryInhomogeneousMixture   const       hConst       PengRobinsonGas           specie  sensibleEnthalpy        
+hePsiThermo     veryInhomogeneousMixture   const       hConst       perfectGas                specie  sensibleEnthalpy        
+hePsiThermo     veryInhomogeneousMixture   sutherland  hConst       PengRobinsonGas           specie  sensibleEnthalpy        
+hePsiThermo     veryInhomogeneousMixture   sutherland  hConst       perfectGas                specie  sensibleEnthalpy        
+hePsiThermo     veryInhomogeneousMixture   sutherland  janaf        PengRobinsonGas           specie  sensibleEnthalpy        
+hePsiThermo     veryInhomogeneousMixture   sutherland  janaf        perfectGas                specie  sensibleEnthalpy        
+heRhoThermo     homogeneousMixture         const       hConst       PengRobinsonGas           specie  sensibleEnthalpy        
+heRhoThermo     homogeneousMixture         const       hConst       incompressiblePerfectGas  specie  sensibleEnthalpy        
+heRhoThermo     homogeneousMixture         const       hConst       perfectGas                specie  sensibleEnthalpy        
+heRhoThermo     homogeneousMixture         sutherland  hConst       PengRobinsonGas           specie  sensibleEnthalpy        
+heRhoThermo     homogeneousMixture         sutherland  janaf        PengRobinsonGas           specie  sensibleEnthalpy        
+heRhoThermo     homogeneousMixture         sutherland  janaf        incompressiblePerfectGas  specie  sensibleEnthalpy        
+heRhoThermo     homogeneousMixture         sutherland  janaf        perfectGas                specie  sensibleEnthalpy        
+heRhoThermo     inhomogeneousMixture       const       hConst       PengRobinsonGas           specie  sensibleEnthalpy        
+heRhoThermo     inhomogeneousMixture       const       hConst       incompressiblePerfectGas  specie  sensibleEnthalpy        
+heRhoThermo     inhomogeneousMixture       const       hConst       perfectGas                specie  sensibleEnthalpy        
+heRhoThermo     inhomogeneousMixture       sutherland  hConst       PengRobinsonGas           specie  sensibleEnthalpy        
+heRhoThermo     inhomogeneousMixture       sutherland  janaf        PengRobinsonGas           specie  sensibleEnthalpy        
+heRhoThermo     inhomogeneousMixture       sutherland  janaf        incompressiblePerfectGas  specie  sensibleEnthalpy        
+heRhoThermo     inhomogeneousMixture       sutherland  janaf        perfectGas                specie  sensibleEnthalpy        
+heRhoThermo     multiComponentMixture      const       eConst       adiabaticPerfectFluid     specie  sensibleInternalEnergy  
+heRhoThermo     multiComponentMixture      const       eConst       incompressiblePerfectGas  specie  sensibleInternalEnergy  
+heRhoThermo     multiComponentMixture      const       eConst       perfectFluid              specie  sensibleInternalEnergy  
+heRhoThermo     multiComponentMixture      const       eConst       perfectGas                specie  sensibleInternalEnergy  
+heRhoThermo     multiComponentMixture      const       eConst       rhoConst                  specie  sensibleInternalEnergy  
+heRhoThermo     multiComponentMixture      const       hConst       adiabaticPerfectFluid     specie  sensibleEnthalpy        
+heRhoThermo     multiComponentMixture      const       hConst       incompressiblePerfectGas  specie  sensibleEnthalpy        
+heRhoThermo     multiComponentMixture      const       hConst       perfectFluid              specie  sensibleEnthalpy        
+heRhoThermo     multiComponentMixture      const       hConst       perfectGas                specie  sensibleEnthalpy        
+heRhoThermo     multiComponentMixture      const       hConst       rhoConst                  specie  sensibleEnthalpy        
+heRhoThermo     multiComponentMixture      polynomial  hPolynomial  icoPolynomial             specie  sensibleEnthalpy        
+heRhoThermo     multiComponentMixture      polynomial  hPolynomial  icoPolynomial             specie  sensibleInternalEnergy  
+heRhoThermo     multiComponentMixture      polynomial  janaf        perfectGas                specie  sensibleEnthalpy        
+heRhoThermo     multiComponentMixture      polynomial  janaf        perfectGas                specie  sensibleInternalEnergy  
+heRhoThermo     multiComponentMixture      sutherland  janaf        incompressiblePerfectGas  specie  sensibleEnthalpy        
+heRhoThermo     multiComponentMixture      sutherland  janaf        incompressiblePerfectGas  specie  sensibleInternalEnergy  
+heRhoThermo     multiComponentMixture      sutherland  janaf        perfectGas                specie  sensibleEnthalpy        
+heRhoThermo     multiComponentMixture      sutherland  janaf        perfectGas                specie  sensibleInternalEnergy  
+heRhoThermo     pureMixture                WLF         eConst       rhoConst                  specie  sensibleInternalEnergy  
+heRhoThermo     pureMixture                const       eConst       adiabaticPerfectFluid     specie  sensibleInternalEnergy  
+heRhoThermo     pureMixture                const       eConst       perfectFluid              specie  sensibleInternalEnergy  
+heRhoThermo     pureMixture                const       eConst       perfectGas                specie  sensibleInternalEnergy  
+heRhoThermo     pureMixture                const       eConst       rPolynomial               specie  sensibleInternalEnergy  
+heRhoThermo     pureMixture                const       eConst       rhoConst                  specie  sensibleInternalEnergy  
+heRhoThermo     pureMixture                const       hConst       Boussinesq                specie  sensibleEnthalpy        
+heRhoThermo     pureMixture                const       hConst       Boussinesq                specie  sensibleInternalEnergy  
+heRhoThermo     pureMixture                const       hConst       adiabaticPerfectFluid     specie  sensibleEnthalpy        
+heRhoThermo     pureMixture                const       hConst       adiabaticPerfectFluid     specie  sensibleInternalEnergy  
+heRhoThermo     pureMixture                const       hConst       icoTabulated              specie  sensibleEnthalpy        
+heRhoThermo     pureMixture                const       hConst       incompressiblePerfectGas  specie  sensibleEnthalpy        
+heRhoThermo     pureMixture                const       hConst       incompressiblePerfectGas  specie  sensibleInternalEnergy  
+heRhoThermo     pureMixture                const       hConst       perfectFluid              specie  sensibleEnthalpy        
+heRhoThermo     pureMixture                const       hConst       perfectFluid              specie  sensibleInternalEnergy  
+heRhoThermo     pureMixture                const       hConst       perfectGas                specie  sensibleEnthalpy        
+heRhoThermo     pureMixture                const       hConst       perfectGas                specie  sensibleInternalEnergy  
+heRhoThermo     pureMixture                const       hConst       rPolynomial               specie  sensibleEnthalpy        
+heRhoThermo     pureMixture                const       hConst       rPolynomial               specie  sensibleInternalEnergy  
+heRhoThermo     pureMixture                const       hConst       rhoConst                  specie  sensibleEnthalpy        
+heRhoThermo     pureMixture                const       hConst       rhoConst                  specie  sensibleInternalEnergy  
+heRhoThermo     pureMixture                polynomial  hPolynomial  PengRobinsonGas           specie  sensibleEnthalpy        
+heRhoThermo     pureMixture                polynomial  hPolynomial  icoPolynomial             specie  sensibleEnthalpy        
+heRhoThermo     pureMixture                polynomial  hPolynomial  icoPolynomial             specie  sensibleInternalEnergy  
+heRhoThermo     pureMixture                polynomial  hPolynomial  icoTabulated              specie  sensibleEnthalpy        
+heRhoThermo     pureMixture                polynomial  hPolynomial  icoTabulated              specie  sensibleInternalEnergy  
+heRhoThermo     pureMixture                polynomial  hPolynomial  incompressiblePerfectGas  specie  sensibleEnthalpy        
+heRhoThermo     pureMixture                polynomial  hPolynomial  perfectGas                specie  sensibleEnthalpy        
+heRhoThermo     pureMixture                polynomial  hPolynomial  rPolynomial               specie  sensibleEnthalpy        
+heRhoThermo     pureMixture                polynomial  janaf        PengRobinsonGas           specie  sensibleEnthalpy        
+heRhoThermo     pureMixture                sutherland  hConst       Boussinesq                specie  sensibleEnthalpy        
+heRhoThermo     pureMixture                sutherland  hConst       Boussinesq                specie  sensibleInternalEnergy  
+heRhoThermo     pureMixture                sutherland  hConst       PengRobinsonGas           specie  sensibleEnthalpy        
+heRhoThermo     pureMixture                sutherland  hConst       icoTabulated              specie  sensibleEnthalpy        
+heRhoThermo     pureMixture                sutherland  hConst       icoTabulated              specie  sensibleInternalEnergy  
+heRhoThermo     pureMixture                sutherland  hConst       incompressiblePerfectGas  specie  sensibleEnthalpy        
+heRhoThermo     pureMixture                sutherland  hConst       incompressiblePerfectGas  specie  sensibleInternalEnergy  
+heRhoThermo     pureMixture                sutherland  hConst       perfectGas                specie  sensibleEnthalpy        
+heRhoThermo     pureMixture                sutherland  hConst       perfectGas                specie  sensibleInternalEnergy  
+heRhoThermo     pureMixture                sutherland  janaf        Boussinesq                specie  sensibleEnthalpy        
+heRhoThermo     pureMixture                sutherland  janaf        Boussinesq                specie  sensibleInternalEnergy  
+heRhoThermo     pureMixture                sutherland  janaf        icoTabulated              specie  sensibleEnthalpy        
+heRhoThermo     pureMixture                sutherland  janaf        icoTabulated              specie  sensibleInternalEnergy  
+heRhoThermo     pureMixture                sutherland  janaf        incompressiblePerfectGas  specie  sensibleEnthalpy        
+heRhoThermo     pureMixture                sutherland  janaf        incompressiblePerfectGas  specie  sensibleInternalEnergy  
+heRhoThermo     pureMixture                sutherland  janaf        perfectGas                specie  sensibleEnthalpy        
+heRhoThermo     pureMixture                sutherland  janaf        perfectGas                specie  sensibleInternalEnergy  
+heRhoThermo     pureMixture                tabulated   hPolynomial  icoPolynomial             specie  sensibleEnthalpy        
+heRhoThermo     pureMixture                tabulated   hPolynomial  icoPolynomial             specie  sensibleInternalEnergy  
+heRhoThermo     pureMixture                tabulated   hTabulated   icoTabulated              specie  sensibleEnthalpy        
+heRhoThermo     pureMixture                tabulated   hTabulated   icoTabulated              specie  sensibleInternalEnergy  
+heRhoThermo     pureMixture                tabulated   hTabulated   perfectGas                specie  sensibleEnthalpy        
+heRhoThermo     pureMixture                tabulated   janaf        icoTabulated              specie  sensibleEnthalpy        
+heRhoThermo     pureZoneMixture            WLF         eConst       rhoConst                  specie  sensibleInternalEnergy  
+heRhoThermo     pureZoneMixture            const       eConst       adiabaticPerfectFluid     specie  sensibleInternalEnergy  
+heRhoThermo     pureZoneMixture            const       eConst       perfectFluid              specie  sensibleInternalEnergy  
+heRhoThermo     pureZoneMixture            const       eConst       perfectGas                specie  sensibleInternalEnergy  
+heRhoThermo     pureZoneMixture            const       eConst       rPolynomial               specie  sensibleInternalEnergy  
+heRhoThermo     pureZoneMixture            const       eConst       rhoConst                  specie  sensibleInternalEnergy  
+heRhoThermo     pureZoneMixture            const       hConst       Boussinesq                specie  sensibleEnthalpy        
+heRhoThermo     pureZoneMixture            const       hConst       Boussinesq                specie  sensibleInternalEnergy  
+heRhoThermo     pureZoneMixture            const       hConst       adiabaticPerfectFluid     specie  sensibleEnthalpy        
+heRhoThermo     pureZoneMixture            const       hConst       adiabaticPerfectFluid     specie  sensibleInternalEnergy  
+heRhoThermo     pureZoneMixture            const       hConst       icoTabulated              specie  sensibleEnthalpy        
+heRhoThermo     pureZoneMixture            const       hConst       incompressiblePerfectGas  specie  sensibleEnthalpy        
+heRhoThermo     pureZoneMixture            const       hConst       incompressiblePerfectGas  specie  sensibleInternalEnergy  
+heRhoThermo     pureZoneMixture            const       hConst       perfectFluid              specie  sensibleEnthalpy        
+heRhoThermo     pureZoneMixture            const       hConst       perfectFluid              specie  sensibleInternalEnergy  
+heRhoThermo     pureZoneMixture            const       hConst       perfectGas                specie  sensibleEnthalpy        
+heRhoThermo     pureZoneMixture            const       hConst       perfectGas                specie  sensibleInternalEnergy  
+heRhoThermo     pureZoneMixture            const       hConst       rPolynomial               specie  sensibleEnthalpy        
+heRhoThermo     pureZoneMixture            const       hConst       rPolynomial               specie  sensibleInternalEnergy  
+heRhoThermo     pureZoneMixture            const       hConst       rhoConst                  specie  sensibleEnthalpy        
+heRhoThermo     pureZoneMixture            const       hConst       rhoConst                  specie  sensibleInternalEnergy  
+heRhoThermo     pureZoneMixture            polynomial  hPolynomial  PengRobinsonGas           specie  sensibleEnthalpy        
+heRhoThermo     pureZoneMixture            polynomial  hPolynomial  icoPolynomial             specie  sensibleEnthalpy        
+heRhoThermo     pureZoneMixture            polynomial  hPolynomial  icoPolynomial             specie  sensibleInternalEnergy  
+heRhoThermo     pureZoneMixture            polynomial  hPolynomial  icoTabulated              specie  sensibleEnthalpy        
+heRhoThermo     pureZoneMixture            polynomial  hPolynomial  icoTabulated              specie  sensibleInternalEnergy  
+heRhoThermo     pureZoneMixture            polynomial  hPolynomial  incompressiblePerfectGas  specie  sensibleEnthalpy        
+heRhoThermo     pureZoneMixture            polynomial  hPolynomial  perfectGas                specie  sensibleEnthalpy        
+heRhoThermo     pureZoneMixture            polynomial  hPolynomial  rPolynomial               specie  sensibleEnthalpy        
+heRhoThermo     pureZoneMixture            polynomial  janaf        PengRobinsonGas           specie  sensibleEnthalpy        
+heRhoThermo     pureZoneMixture            sutherland  hConst       Boussinesq                specie  sensibleEnthalpy        
+heRhoThermo     pureZoneMixture            sutherland  hConst       Boussinesq                specie  sensibleInternalEnergy  
+heRhoThermo     pureZoneMixture            sutherland  hConst       PengRobinsonGas           specie  sensibleEnthalpy        
+heRhoThermo     pureZoneMixture            sutherland  hConst       icoTabulated              specie  sensibleEnthalpy        
+heRhoThermo     pureZoneMixture            sutherland  hConst       icoTabulated              specie  sensibleInternalEnergy  
+heRhoThermo     pureZoneMixture            sutherland  hConst       incompressiblePerfectGas  specie  sensibleEnthalpy        
+heRhoThermo     pureZoneMixture            sutherland  hConst       incompressiblePerfectGas  specie  sensibleInternalEnergy  
+heRhoThermo     pureZoneMixture            sutherland  hConst       perfectGas                specie  sensibleEnthalpy        
+heRhoThermo     pureZoneMixture            sutherland  hConst       perfectGas                specie  sensibleInternalEnergy  
+heRhoThermo     pureZoneMixture            sutherland  janaf        Boussinesq                specie  sensibleEnthalpy        
+heRhoThermo     pureZoneMixture            sutherland  janaf        Boussinesq                specie  sensibleInternalEnergy  
+heRhoThermo     pureZoneMixture            sutherland  janaf        icoTabulated              specie  sensibleEnthalpy        
+heRhoThermo     pureZoneMixture            sutherland  janaf        icoTabulated              specie  sensibleInternalEnergy  
+heRhoThermo     pureZoneMixture            sutherland  janaf        incompressiblePerfectGas  specie  sensibleEnthalpy        
+heRhoThermo     pureZoneMixture            sutherland  janaf        incompressiblePerfectGas  specie  sensibleInternalEnergy  
+heRhoThermo     pureZoneMixture            sutherland  janaf        perfectGas                specie  sensibleEnthalpy        
+heRhoThermo     pureZoneMixture            sutherland  janaf        perfectGas                specie  sensibleInternalEnergy  
+heRhoThermo     pureZoneMixture            tabulated   hPolynomial  icoPolynomial             specie  sensibleEnthalpy        
+heRhoThermo     pureZoneMixture            tabulated   hPolynomial  icoPolynomial             specie  sensibleInternalEnergy  
+heRhoThermo     pureZoneMixture            tabulated   hTabulated   icoTabulated              specie  sensibleEnthalpy        
+heRhoThermo     pureZoneMixture            tabulated   hTabulated   icoTabulated              specie  sensibleInternalEnergy  
+heRhoThermo     pureZoneMixture            tabulated   hTabulated   perfectGas                specie  sensibleEnthalpy        
+heRhoThermo     pureZoneMixture            tabulated   janaf        icoTabulated              specie  sensibleEnthalpy        
+heRhoThermo     reactingMixture            const       eConst       adiabaticPerfectFluid     specie  sensibleInternalEnergy  
+heRhoThermo     reactingMixture            const       eConst       incompressiblePerfectGas  specie  sensibleInternalEnergy  
+heRhoThermo     reactingMixture            const       eConst       perfectFluid              specie  sensibleInternalEnergy  
+heRhoThermo     reactingMixture            const       eConst       perfectGas                specie  sensibleInternalEnergy  
+heRhoThermo     reactingMixture            const       eConst       rhoConst                  specie  sensibleInternalEnergy  
+heRhoThermo     reactingMixture            const       hConst       adiabaticPerfectFluid     specie  sensibleEnthalpy        
+heRhoThermo     reactingMixture            const       hConst       incompressiblePerfectGas  specie  sensibleEnthalpy        
+heRhoThermo     reactingMixture            const       hConst       perfectFluid              specie  sensibleEnthalpy        
+heRhoThermo     reactingMixture            const       hConst       perfectGas                specie  sensibleEnthalpy        
+heRhoThermo     reactingMixture            const       hConst       rhoConst                  specie  sensibleEnthalpy        
+heRhoThermo     reactingMixture            polynomial  hPolynomial  icoPolynomial             specie  sensibleEnthalpy        
+heRhoThermo     reactingMixture            polynomial  hPolynomial  icoPolynomial             specie  sensibleInternalEnergy  
+heRhoThermo     reactingMixture            sutherland  janaf        PengRobinsonGas           specie  sensibleEnthalpy        
+heRhoThermo     reactingMixture            sutherland  janaf        PengRobinsonGas           specie  sensibleInternalEnergy  
+heRhoThermo     reactingMixture            sutherland  janaf        incompressiblePerfectGas  specie  sensibleEnthalpy        
+heRhoThermo     reactingMixture            sutherland  janaf        incompressiblePerfectGas  specie  sensibleInternalEnergy  
+heRhoThermo     reactingMixture            sutherland  janaf        perfectGas                specie  sensibleEnthalpy        
+heRhoThermo     reactingMixture            sutherland  janaf        perfectGas                specie  sensibleInternalEnergy  
+heRhoThermo     singleStepReactingMixture  sutherland  janaf        perfectGas                specie  sensibleEnthalpy        
+heRhoThermo     singleStepReactingMixture  sutherland  janaf        perfectGas                specie  sensibleInternalEnergy  
+heRhoThermo     veryInhomogeneousMixture   const       hConst       PengRobinsonGas           specie  sensibleEnthalpy        
+heRhoThermo     veryInhomogeneousMixture   const       hConst       incompressiblePerfectGas  specie  sensibleEnthalpy        
+heRhoThermo     veryInhomogeneousMixture   const       hConst       perfectGas                specie  sensibleEnthalpy        
+heRhoThermo     veryInhomogeneousMixture   sutherland  hConst       PengRobinsonGas           specie  sensibleEnthalpy        
+heRhoThermo     veryInhomogeneousMixture   sutherland  janaf        PengRobinsonGas           specie  sensibleEnthalpy        
+heRhoThermo     veryInhomogeneousMixture   sutherland  janaf        incompressiblePerfectGas  specie  sensibleEnthalpy        
+heRhoThermo     veryInhomogeneousMixture   sutherland  janaf        perfectGas                specie  sensibleEnthalpy        
+heheuPsiThermo  egrMixture                 const       hConst       perfectGas                specie  absoluteEnthalpy        
+heheuPsiThermo  egrMixture                 sutherland  janaf        perfectGas                specie  absoluteEnthalpy        
+heheuPsiThermo  egrMixture                 sutherland  janaf        perfectGas                specie  absoluteInternalEnergy  
+heheuPsiThermo  homogeneousMixture         const       hConst       perfectGas                specie  absoluteEnthalpy        
+heheuPsiThermo  homogeneousMixture         const       janaf        perfectGas                specie  absoluteEnthalpy        
+heheuPsiThermo  homogeneousMixture         sutherland  janaf        perfectGas                specie  absoluteEnthalpy        
+heheuPsiThermo  homogeneousMixture         sutherland  janaf        perfectGas                specie  absoluteInternalEnergy  
+heheuPsiThermo  inhomogeneousMixture       const       hConst       perfectGas                specie  absoluteEnthalpy        
+heheuPsiThermo  inhomogeneousMixture       sutherland  janaf        perfectGas                specie  absoluteEnthalpy        
+heheuPsiThermo  inhomogeneousMixture       sutherland  janaf        perfectGas                specie  absoluteInternalEnergy  
+heheuPsiThermo  veryInhomogeneousMixture   const       hConst       perfectGas                specie  absoluteEnthalpy        
+heheuPsiThermo  veryInhomogeneousMixture   sutherland  janaf        perfectGas                specie  absoluteEnthalpy        
+heheuPsiThermo  veryInhomogeneousMixture   sutherland  janaf        perfectGas                specie  absoluteInternalEnergy  
+
+
+file: constant/thermophysicalProperties/thermoType at line 22 to 30.
+
+    From static typename ThermoConstructTable::mapped_type Foam::basicThermo::getThermoOrDie(const Foam::dictionary&, ThermoConstructTable&, const Foam::word&, const Foam::wordList&) [with Thermo = Foam::fluidThermo; ThermoConstructTable = Foam::HashTable<Foam::autoPtr<Foam::fluidThermo> (*)(const Foam::fvMesh&, const Foam::word&), Foam::word, Foam::Hash<Foam::word> >; typename ThermoConstructTable::mapped_type = Foam::autoPtr<Foam::fluidThermo> (*)(const Foam::fvMesh&, const Foam::word&); Foam::wordList = Foam::List<Foam::word>]
+    in file lnInclude/basicThermoTemplates.C at line 50.
+
+FOAM exiting
+
