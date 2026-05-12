@@ -40,7 +40,7 @@ mixture
     {
         rho0        1;
         T0          1;
-        beta        1;
+        beta        1e-4;
     }
     thermodynamics
     {
