@@ -2,8 +2,7 @@
   "file-series-version" : "1.0",
   "files" : [
     { "name" : "mhdTURBtest1_0.vtm", "time" : 0 },
-    { "name" : "mhdTURBtest1_100.vtm", "time" : 1e-05 },
-    { "name" : "mhdTURBtest1_200.vtm", "time" : 2e-05 },
-    { "name" : "mhdTURBtest1_300.vtm", "time" : 3e-05 }
+    { "name" : "mhdTURBtest1_100.vtm", "time" : 0.001 },
+    { "name" : "mhdTURBtest1_200.vtm", "time" : 0.002 }
   ]
 }

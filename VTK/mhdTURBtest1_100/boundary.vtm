@@ -1,5 +1,5 @@
 <?xml version='1.0'?>
-<!-- time='1e-05' -->
+<!-- time='0.001' -->
 <VTKFile type='vtkMultiBlockDataSet' version='1.0' byte_order='LittleEndian' header_type='UInt64'>
   <vtkMultiBlockDataSet>
     <Block name='boundary'>
@@ -11,7 +11,7 @@
   </vtkMultiBlockDataSet>
   <FieldData>
     <DataArray type='Float32' Name='TimeValue' NumberOfTuples='1' format='ascii'>
-1e-05
+0.001
     </DataArray>
   </FieldData>
 </VTKFile>
