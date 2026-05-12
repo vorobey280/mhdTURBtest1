@@ -25,13 +25,15 @@ boundaryField
 {
     inlet
     {
-        type            zeroGradient;
+        type            fixedValue;
+	value		uniform 300;
     }
 
     outlet
     {
-        type            fixedValue;
-        value           $internalField;
+        type            inletOutlet;
+        inletValue      uniform 300;
+	value		uniform 300;
     }
 
     lowerWall

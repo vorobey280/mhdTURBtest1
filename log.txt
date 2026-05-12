@@ -8,12 +8,12 @@
 Build  : _87ed40d256-20251219 OPENFOAM=2512 version=v2512
 Arch   : "LSB;label=32;scalar=64"
 Exec   : magnetoHDFoam
-Date   : May 11 2026
-Time   : 23:23:56
-Host   : lilcube
-PID    : 301434
+Date   : May 12 2026
+Time   : 11:03:59
+Host   : Raf
+PID    : 344570
 I/O    : uncollated
-Case   : /home/chizh/OpenFOAM/run/magnetoHD_test/hartmann
+Case   : /home/Raf/OpenFOAM/run/mhdTURBtest1
 nProcs : 1
 trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
 memory pool : not available
@@ -55,169 +55,83 @@ Creating turbulence model
 
 Selecting turbulence model type RAS
 Selecting RAS turbulence model kOmegaSST
+Selecting patchDistMethod meshWave
+RAS
+{
+    model           kOmegaSST;
+    turbulence      on;
+    printCoeffs     on;
+    alphaK1         0.85;
+    alphaK2         1;
+    alphaOmega1     0.5;
+    alphaOmega2     0.856;
+    gamma1          0.555556;
+    gamma2          0.44;
+    beta1           0.075;
+    beta2           0.0828;
+    betaStar        0.09;
+    a1              0.31;
+    b1              1;
+    c1              10;
+    F3              false;
+    decayControl    false;
+    kInf            0;
+    omegaInf        0;
+}
 
 
---> FOAM FATAL IO ERROR: (openfoam-2512)
-Unknown patchField type nutWallFunction for patch type patch
+Reading g
 
-Valid patchField types :
+Reading hRef
+Calculating field g.h
 
-147
-(
-MarshakRadiation
-MarshakRadiationFixedTemperature
-acousticWaveTransmissive
-advective
-alphaFixedPressure
-alphatJayatillekeWallFunction
-atmAlphatkWallFunction
-atmBoundaryLayerInletEpsilon
-atmBoundaryLayerInletK
-atmBoundaryLayerInletOmega
-atmEpsilonWallFunction
-atmNutUWallFunction
-atmNutWallFunction
-atmNutkWallFunction
-atmOmegaWallFunction
-atmTurbulentHeatFluxTemperature
-calculated
-codedFixedValue
-codedMixed
-compressible::alphatJayatillekeWallFunction
-compressible::alphatWallFunction
-compressible::thermalBaffle1D<hConstSolidThermoPhysics>
-compressible::thermalBaffle1D<hPowerSolidThermoPhysics>
-compressible::thermalShell
-compressible::turbulentTemperatureCoupledBaffleMixed
-compressible::turbulentTemperatureRadCoupledMixed
-constantAlphaContactAngle
-convectiveHeatTransfer
-cyclic
-cyclicACMI
-cyclicAMI
-cyclicSlip
-directionMixed
-dynamicAlphaContactAngle
-electrostaticDeposition
-empty
-energyJump
-energyJumpAMI
-enthalpySorption
-epsilonWallFunction
-exprFixedValue
-exprMixed
-externalWallHeatFluxTemperature
-extrapolatedCalculated
-fan
-fanPressure
-fixedEnergy
-fixedFluxExtrapolatedPressure
-fixedFluxPressure
-fixedGradient
-fixedIncidentRadiation
-fixedInternalValue
-fixedJump
-fixedJumpAMI
-fixedMean
-fixedMeanOutletInlet
-fixedPressureCompressibleDensity
-fixedProfile
-fixedUnburntEnthalpy
-fixedValue
-freestream
-freestreamPressure
-gradientEnergy
-gradientUnburntEnthalpy
-greyDiffusiveRadiation
-greyDiffusiveRadiationViewFactor
-humidityTemperatureCoupledMixed
-inletOutlet
-inletOutletTotalTemperature
-interfaceCompression
-kLowReWallFunction
-kqRWallFunction
-lumpedMassWallTemperature
-mapped
-mappedField
-mappedFixedInternalValue
-mappedFixedPushedInternalValue
-mappedMixed
-mappedMixedField
-mixed
-mixedEnergy
-mixedUnburntEnthalpy
-nonuniformTransformCyclic
-nutLowReWallFunction
-nutTabulatedWallFunction
-nutUBlendedWallFunction
-nutURoughWallFunction
-nutUSpaldingWallFunction
-nutUWallFunction
-nutkRoughWallFunction
-nutkWallFunction
-omegaWallFunction
-outletInlet
-outletMachNumberPressure
-outletMappedUniformInlet
-outletMappedUniformInletHeatAddition
-overset
-partialSlip
-phaseHydrostaticPressure
-plenumPressure
-porousBafflePressure
-prghPermeableAlphaTotalPressure
-prghPressure
-prghTotalHydrostaticPressure
-prghTotalPressure
-processor
-processorCyclic
-rotatingTotalPressure
-scaledFixedValue
-semiPermeableBaffleMassFraction
-sliced
-slip
-sorptionWallFunction
-speciesSorption
-specularRadiation
-symmetry
-symmetryPlane
-syringePressure
-temperatureDependentAlphaContactAngle
-timeVaryingAlphaContactAngle
-timeVaryingMappedFixedValue
-timeVaryingMassSorption
-totalFlowRateAdvectiveDiffusive
-totalPressure
-totalTemperature
-turbulentDigitalFilterInlet
-turbulentInlet
-turbulentIntensityKineticEnergyInlet
-turbulentMixingLengthDissipationRateInlet
-turbulentMixingLengthFrequencyInlet
-uniformDensityHydrostaticPressure
-uniformFixedGradient
-uniformFixedValue
-uniformInletOutlet
-uniformJump
-uniformJumpAMI
-uniformMixed
-uniformTotalPressure
-variableHeightFlowRate
-vibrationShell
-wallHeatTransfer
-waveSurfacePressure
-waveTransmissive
-wedge
-wideBandDiffusiveRadiation
-zeroGradient
-zeroValue
-)
+Reading field p_rgh
 
+Creating field dpdt
 
-file: 0/nut/boundaryField/lowerWall at line 38 to 39.
+Creating field kinetic energy K
 
-    From static Foam::tmp<Foam::fvPatchField<Type> > Foam::fvPatchField<Type>::New(const Foam::fvPatch&, const Foam::DimensionedField<Type, Foam::volMesh>&, const Foam::dictionary&) [with Type = double]
-    in file /opt/OpenFOAM/OpenFOAM-v2512/src/finiteVolume/lnInclude/fvPatchFieldNew.C at line 124.
+No MRF models present
 
-FOAM exiting
+No finite volume options present
+Reading field pB
 
+Reading field B
+
+Calculating face flux phiB
+
+Reading transportProperties
+
+Courant Number mean: -0.000125 max: -0
+
+Starting time loop
+
+Courant Number mean: -0.000125 max: -0
+Time = 0.005
+
+PIMPLE: iteration 1
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 1, Final residual = 5.16956e-06, No Iterations 12
+smoothSolver:  Solving for Uy, Initial residual = 1, Final residual = 8.81913e-06, No Iterations 15
+smoothSolver:  Solving for h, Initial residual = 0.00375964, Final residual = 0.00288199, No Iterations 1000
+smoothSolver:  Solving for p_rgh, Initial residual = 0.941119, Final residual = 0.477878, No Iterations 1000
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = -0.000249939, global = 0.000249938, cumulative = 0.000249938
+smoothSolver:  Solving for omega, Initial residual = 0.145963, Final residual = 9.0869e-06, No Iterations 6
+smoothSolver:  Solving for k, Initial residual = 1, Final residual = 5.09789e-06, No Iterations 13
+[stack trace]
+=============
+#1  Foam::sigFpe::sigHandler(int) in /opt/OpenFOAM/OpenFOAM-v2512/platforms/linux64GccDPInt32Opt/lib/libOpenFOAM.so
+#2  ? in /usr/lib/libc.so.6
+#3  ? in /usr/lib/libm.so.6
+#4  Foam::nutUWallFunctionFvPatchScalarField::calcYPlus(Foam::Field<double> const&) const in /opt/OpenFOAM/OpenFOAM-v2512/platforms/linux64GccDPInt32Opt/lib/libturbulenceModels.so
+#5  Foam::nutUWallFunctionFvPatchScalarField::calcNut() const in /opt/OpenFOAM/OpenFOAM-v2512/platforms/linux64GccDPInt32Opt/lib/libturbulenceModels.so
+#6  Foam::nutWallFunctionFvPatchScalarField::updateCoeffs() in /opt/OpenFOAM/OpenFOAM-v2512/platforms/linux64GccDPInt32Opt/lib/libturbulenceModels.so
+#7  Foam::GeometricBoundaryField<double, Foam::fvPatchField, Foam::volMesh>::evaluate(Foam::UPstream::commsTypes) in ~/OpenFOAM/Raf-v2512/platforms/linux64GccDPInt32Opt/bin/magnetoHDFoam
+#8  Foam::kOmegaSSTBase<Foam::eddyViscosity<Foam::RASModel<Foam::EddyDiffusivity<Foam::ThermalDiffusivity<Foam::CompressibleTurbulenceModel<Foam::fluidThermo> > > > > >::correctNut(Foam::GeometricField<double, Foam::fvPatchField, Foam::volMesh> const&) in /opt/OpenFOAM/OpenFOAM-v2512/platforms/linux64GccDPInt32Opt/lib/libcompressibleTurbulenceModels.so
+#9  Foam::kOmegaSSTBase<Foam::eddyViscosity<Foam::RASModel<Foam::EddyDiffusivity<Foam::ThermalDiffusivity<Foam::CompressibleTurbulenceModel<Foam::fluidThermo> > > > > >::correct() in /opt/OpenFOAM/OpenFOAM-v2512/platforms/linux64GccDPInt32Opt/lib/libcompressibleTurbulenceModels.so
+#10  ? in ~/OpenFOAM/Raf-v2512/platforms/linux64GccDPInt32Opt/bin/magnetoHDFoam
+#11  ? in /usr/lib/libc.so.6
+#12  __libc_start_main in /usr/lib/libc.so.6
+#13  ? in ~/OpenFOAM/Raf-v2512/platforms/linux64GccDPInt32Opt/bin/magnetoHDFoam
+=============
