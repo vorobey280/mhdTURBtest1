@@ -101,6 +101,16 @@ solvers
         relTol          0;
     }
 
+    BFinal
+    {
+        solver          smoothSolver;
+        smoother        symGaussSeidel;
+        $B;
+        tolerance       1e-05;
+        relTol          0;
+    }
+
+
 }
 
 PIMPLE
