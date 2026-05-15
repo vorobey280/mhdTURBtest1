@@ -1,0 +1,230 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2512                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _87ed40d256-20251219 OPENFOAM=2512 version=v2512
+Arch   : "LSB;label=32;scalar=64"
+Exec   : magnetoHDFoam
+Date   : May 15 2026
+Time   : 15:13:43
+Host   : Raf
+PID    : 973017
+I/O    : uncollated
+Case   : /home/Raf/OpenFOAM/run/mhdTURBtest1
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+memory pool : not available
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+
+PIMPLE: Operating solver in PISO mode
+
+
+PISO: Operating solver in PISO mode
+
+
+BPISO: Operating solver in PISO mode
+
+Reading thermophysical properties
+
+Selecting thermodynamics package 
+{
+    type            heRhoThermo;
+    mixture         pureMixture;
+    transport       const;
+    thermo          hConst;
+    equationOfState Boussinesq;
+    specie          specie;
+    energy          sensibleEnthalpy;
+}
+
+Reading field U
+
+Reading/calculating face flux field phi
+
+Creating turbulence model
+
+Selecting turbulence model type RAS
+Selecting RAS turbulence model kOmegaSST
+Selecting patchDistMethod meshWave
+RAS
+{
+    model           kOmegaSST;
+    turbulence      on;
+    printCoeffs     on;
+    alphaK1         0.85;
+    alphaK2         1;
+    alphaOmega1     0.5;
+    alphaOmega2     0.856;
+    gamma1          0.555556;
+    gamma2          0.44;
+    beta1           0.075;
+    beta2           0.0828;
+    betaStar        0.09;
+    a1              0.31;
+    b1              1;
+    c1              10;
+    F3              false;
+    decayControl    false;
+    kInf            0;
+    omegaInf        0;
+}
+
+
+Reading g
+
+Reading hRef
+Calculating field g.h
+
+Reading field p_rgh
+
+Creating field dpdt
+
+Creating field kinetic energy K
+
+No MRF models present
+
+No finite volume options present
+Reading field pB
+
+Reading field B
+
+Calculating face flux phiB
+
+Reading transportProperties
+
+Courant Number mean: 1.5e-05 max: 0.015
+
+Starting time loop
+
+Courant Number mean: 1.5e-05 max: 0.015
+Time = 0.0001
+
+PIMPLE: iteration 1
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 1, Final residual = 8.93392e-09, No Iterations 10
+smoothSolver:  Solving for Uy, Initial residual = 1, Final residual = 7.1292e-09, No Iterations 11
+smoothSolver:  Solving for Uz, Initial residual = 0.999983, Final residual = 4.10608e-09, No Iterations 11
+smoothSolver:  Solving for h, Initial residual = 1, Final residual = 2.72356e-09, No Iterations 11
+smoothSolver:  Solving for p_rgh, Initial residual = 0.978187, Final residual = 0.85934, No Iterations 1000
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 3.11149e-05, global = 2.99832e-05, cumulative = 2.99832e-05
+smoothSolver:  Solving for omega, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for k, Initial residual = 1, Final residual = 5.89644e-06, No Iterations 6
+smoothSolver:  Solving for Bx, Initial residual = 1, Final residual = 9.921e-06, No Iterations 845
+smoothSolver:  Solving for By, Initial residual = 1, Final residual = 0.0104389, No Iterations 1000
+smoothSolver:  Solving for Bz, Initial residual = 0.98848, Final residual = 1.81284e-05, No Iterations 1000
+DICPCG:  Solving for pB, Initial residual = 1, Final residual = 9.98707e-06, No Iterations 468
+magnetic flux divergence error = 4.47128e-11
+smoothSolver:  Solving for Bx, Initial residual = 0.000196135, Final residual = 9.95814e-06, No Iterations 214
+smoothSolver:  Solving for By, Initial residual = 0.000454269, Final residual = 9.97333e-06, No Iterations 945
+smoothSolver:  Solving for Bz, Initial residual = 1.77738e-05, Final residual = 9.89268e-06, No Iterations 6
+DICPCG:  Solving for pB, Initial residual = 0.00941567, Final residual = 9.70582e-06, No Iterations 86
+magnetic flux divergence error = 8.77409e-11
+smoothSolver:  Solving for Bx, Initial residual = 1.18273e-05, Final residual = 9.96399e-06, No Iterations 13
+smoothSolver:  Solving for By, Initial residual = 9.96775e-06, Final residual = 9.96775e-06, No Iterations 0
+smoothSolver:  Solving for Bz, Initial residual = 9.93613e-06, Final residual = 9.93613e-06, No Iterations 0
+DICPCG:  Solving for pB, Initial residual = 9.75075e-06, Final residual = 9.75075e-06, No Iterations 0
+magnetic flux divergence error = 8.89755e-11
+ExecutionTime = 13.73 s  ClockTime = 13 s
+
+Courant Number mean: 0.000556879 max: 0.0368594
+Time = 0.0002
+
+PIMPLE: iteration 1
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.394768, Final residual = 8.53208e-09, No Iterations 54
+smoothSolver:  Solving for Uy, Initial residual = 0.919046, Final residual = 8.98104e-09, No Iterations 57
+smoothSolver:  Solving for Uz, Initial residual = 0.51635, Final residual = 8.49154e-09, No Iterations 50
+smoothSolver:  Solving for h, Initial residual = 0.205527, Final residual = 8.11751e-09, No Iterations 50
+smoothSolver:  Solving for p_rgh, Initial residual = 0.855341, Final residual = 0.179815, No Iterations 1000
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 3.37222e-05, global = 2.99832e-05, cumulative = 5.99664e-05
+smoothSolver:  Solving for omega, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for k, Initial residual = 0.218948, Final residual = 9.84959e-06, No Iterations 25
+smoothSolver:  Solving for Bx, Initial residual = 0.94725, Final residual = 9.98499e-06, No Iterations 869
+smoothSolver:  Solving for By, Initial residual = 0.0543664, Final residual = 0.000272521, No Iterations 1000
+smoothSolver:  Solving for Bz, Initial residual = 0.369476, Final residual = 1.85677e-05, No Iterations 1000
+DICPCG:  Solving for pB, Initial residual = 0.375338, Final residual = 9.3187e-06, No Iterations 702
+magnetic flux divergence error = 1.06415e-10
+smoothSolver:  Solving for Bx, Initial residual = 2.43734e-05, Final residual = 9.54123e-06, No Iterations 5
+smoothSolver:  Solving for By, Initial residual = 0.000190773, Final residual = 9.96653e-06, No Iterations 687
+smoothSolver:  Solving for Bz, Initial residual = 2.69074e-05, Final residual = 9.97659e-06, No Iterations 167
+DICPCG:  Solving for pB, Initial residual = 0.00353648, Final residual = 8.7503e-06, No Iterations 54
+magnetic flux divergence error = 1.20991e-10
+smoothSolver:  Solving for Bx, Initial residual = 9.60268e-06, Final residual = 9.60268e-06, No Iterations 0
+smoothSolver:  Solving for By, Initial residual = 9.9497e-06, Final residual = 9.9497e-06, No Iterations 0
+smoothSolver:  Solving for Bz, Initial residual = 9.97565e-06, Final residual = 9.97565e-06, No Iterations 0
+DICPCG:  Solving for pB, Initial residual = 8.72217e-06, Final residual = 8.72217e-06, No Iterations 0
+magnetic flux divergence error = 1.20991e-10
+ExecutionTime = 25.61 s  ClockTime = 25 s
+
+Courant Number mean: 0.00169611 max: 0.22192
+Time = 0.0003
+
+PIMPLE: iteration 1
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.729945, Final residual = 9.25146e-09, No Iterations 55
+smoothSolver:  Solving for Uy, Initial residual = 0.893794, Final residual = 8.80968e-09, No Iterations 56
+smoothSolver:  Solving for Uz, Initial residual = 0.205905, Final residual = 9.58399e-09, No Iterations 51
+smoothSolver:  Solving for h, Initial residual = 0.128096, Final residual = 7.84688e-09, No Iterations 49
+smoothSolver:  Solving for p_rgh, Initial residual = 0.876149, Final residual = 0.0936812, No Iterations 1000
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 0.000161878, global = 2.99825e-05, cumulative = 8.9949e-05
+smoothSolver:  Solving for omega, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for k, Initial residual = 0.153891, Final residual = 8.17192e-06, No Iterations 25
+smoothSolver:  Solving for Bx, Initial residual = 0.989109, Final residual = 9.92787e-06, No Iterations 946
+smoothSolver:  Solving for By, Initial residual = 0.25479, Final residual = 0.000478809, No Iterations 1000
+smoothSolver:  Solving for Bz, Initial residual = 0.161956, Final residual = 2.12891e-05, No Iterations 1000
+DICPCG:  Solving for pB, Initial residual = 0.744917, Final residual = 8.94963e-06, No Iterations 712
+magnetic flux divergence error = 2.34659e-10
+smoothSolver:  Solving for Bx, Initial residual = 0.000180493, Final residual = 9.91417e-06, No Iterations 128
+smoothSolver:  Solving for By, Initial residual = 0.00066143, Final residual = 9.96181e-06, No Iterations 803
+smoothSolver:  Solving for Bz, Initial residual = 8.45995e-05, Final residual = 9.98728e-06, No Iterations 190
+DICPCG:  Solving for pB, Initial residual = 0.00446745, Final residual = 9.65358e-06, No Iterations 86
+magnetic flux divergence error = 3.94535e-10
+smoothSolver:  Solving for Bx, Initial residual = 1.04136e-05, Final residual = 9.99076e-06, No Iterations 3
+smoothSolver:  Solving for By, Initial residual = 1.16312e-05, Final residual = 9.9537e-06, No Iterations 10
+smoothSolver:  Solving for Bz, Initial residual = 1.00483e-05, Final residual = 9.96559e-06, No Iterations 1
+DICPCG:  Solving for pB, Initial residual = 1.21467e-05, Final residual = 9.20138e-06, No Iterations 9
+magnetic flux divergence error = 3.77575e-10
+ExecutionTime = 38.25 s  ClockTime = 38 s
+
+Courant Number mean: 0.00924137 max: 1.32388
+Time = 0.0004
+
+PIMPLE: iteration 1
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.878266, Final residual = 8.14347e-09, No Iterations 51
+smoothSolver:  Solving for Uy, Initial residual = 0.894068, Final residual = 8.6367e-09, No Iterations 53
+smoothSolver:  Solving for Uz, Initial residual = 0.159186, Final residual = 7.5328e-09, No Iterations 51
+smoothSolver:  Solving for h, Initial residual = 0.159152, Final residual = 9.53269e-09, No Iterations 47
+smoothSolver:  Solving for p_rgh, Initial residual = 0.771869, Final residual = 0.0435007, No Iterations 1000
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 0.000792639, global = 2.99679e-05, cumulative = 0.000119917
+smoothSolver:  Solving for omega, Initial residual = 0, Final residual = 0, No Iterations 0
+[stack trace]
+=============
+#1  Foam::sigFpe::sigHandler(int) in /opt/OpenFOAM/OpenFOAM-v2512/platforms/linux64GccDPInt32Opt/lib/libOpenFOAM.so
+#2  ? in /usr/lib/libc.so.6
+#3  ? in /opt/OpenFOAM/OpenFOAM-v2512/platforms/linux64GccDPInt32Opt/lib/libOpenFOAM.so
+#4  Foam::smoothSolver::solve(Foam::Field<double>&, Foam::Field<double> const&, unsigned char) const in /opt/OpenFOAM/OpenFOAM-v2512/platforms/linux64GccDPInt32Opt/lib/libOpenFOAM.so
+#5  Foam::fvMatrix<double>::solveSegregated(Foam::dictionary const&) in /opt/OpenFOAM/OpenFOAM-v2512/platforms/linux64GccDPInt32Opt/lib/libfiniteVolume.so
+#6  Foam::fvMatrix<double>::solveSegregatedOrCoupled(Foam::dictionary const&) in /opt/OpenFOAM/OpenFOAM-v2512/platforms/linux64GccDPInt32Opt/lib/libfiniteVolume.so
+#7  Foam::fvMesh::solve(Foam::fvMatrix<double>&, Foam::dictionary const&) const in /opt/OpenFOAM/OpenFOAM-v2512/platforms/linux64GccDPInt32Opt/lib/libfiniteVolume.so
+#8  Foam::SolverPerformance<double> Foam::solve<double>(Foam::tmp<Foam::fvMatrix<double> > const&) in /opt/OpenFOAM/OpenFOAM-v2512/platforms/linux64GccDPInt32Opt/lib/libfiniteVolume.so
+#9  Foam::kOmegaSSTBase<Foam::eddyViscosity<Foam::RASModel<Foam::EddyDiffusivity<Foam::ThermalDiffusivity<Foam::CompressibleTurbulenceModel<Foam::fluidThermo> > > > > >::correct() in /opt/OpenFOAM/OpenFOAM-v2512/platforms/linux64GccDPInt32Opt/lib/libcompressibleTurbulenceModels.so
+#10  ? in ~/OpenFOAM/Raf-v2512/platforms/linux64GccDPInt32Opt/bin/magnetoHDFoam
+#11  ? in /usr/lib/libc.so.6
+#12  __libc_start_main in /usr/lib/libc.so.6
+#13  ? in ~/OpenFOAM/Raf-v2512/platforms/linux64GccDPInt32Opt/bin/magnetoHDFoam
+=============
