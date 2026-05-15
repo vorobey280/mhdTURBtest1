@@ -1,6 +1,7 @@
 {
   "file-series-version" : "1.0",
   "files" : [
-    { "name" : "mhdTURBtest1_0.vtm", "time" : 0 }
+    { "name" : "mhdTURBtest1_0.vtm", "time" : 0 },
+    { "name" : "mhdTURBtest1_1000.vtm", "time" : 0.1 }
   ]
 }
