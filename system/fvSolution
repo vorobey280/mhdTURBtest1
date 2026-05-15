@@ -27,10 +27,10 @@ solvers
     pFinal
     {
         $p;
-        relTol          0;
+        reltol          0;
     }
 
-    rhoFinal
+    rho
     {
         solver          PCG;
         preconditioner  DIC;
@@ -40,7 +40,6 @@ solvers
 
     rhoFinal
     {
-        solver          PCG;
         $rho;
         relTol          0;
     }
@@ -118,9 +117,11 @@ solvers
 
     omega
     {
-        solver          smoothSolver;
-        smoother        symGaussSeidel;
-        tolerance       1e-08;
+        //solver          smoothSolver;
+        //smoother        symGaussSeidel;
+				solver          PBiCGStab;
+        preconditioner  DILU;
+        tolerance       1e-05;
         relTol          0.1;
     }
  
@@ -133,11 +134,29 @@ solvers
         relTol          0;
     }
 
+    epsilon
+    {
+        solver          smoothSolver;
+        smoother        symGaussSeidel;
+        tolerance       1e-05;
+        relTol          0.1;
+    }
+ 
+    epsilonFinal
+    {
+        solver          smoothSolver;
+        smoother        symGaussSeidel;
+        $epsilon;
+        tolerance       1e-05;
+        relTol          0;
+    }
+
+
     k
     {
         solver          smoothSolver;
         smoother        symGaussSeidel;
-        tolerance       1e-08;
+        tolerance       1e-05;
         relTol          0.1;
     }
  

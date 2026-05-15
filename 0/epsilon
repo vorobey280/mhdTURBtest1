@@ -1,7 +1,7 @@
 /*--------------------------------*- C++ -*----------------------------------*\
 | =========                 |                                                 |
 | \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
-|  \\    /   O peration     | Version:  2512                                  |
+|  \\    /   O peration     | Version:  v2512                                 |
 |   \\  /    A nd           | Website:  www.openfoam.com                      |
 |    \\/     M anipulation  |                                                 |
 \*---------------------------------------------------------------------------*/
@@ -9,49 +9,46 @@ FoamFile
 {
     version     2.0;
     format      ascii;
-    arch        "LSB;label=32;scalar=64";
-    class       dictionary;
-    location    "constant";
-    object      thermophysicalProperties;
+    class       volScalarField;
+    object      epsilon;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
+dimensions      [0 2 -3 0 0 0 0];
 
-thermoType
+internalField   uniform 14.855;
+
+boundaryField
 {
-    type            heRhoThermo;
-    mixture         pureMixture;
+    inlet
+    {
+        type            fixedValue;
+        value           uniform 14.855;
+    }
 
-    transport       const;
-    thermo          hConst;
-    equationOfState Boussinesq;
-    specie          specie;
+    outlet
+    {
+        type            zeroGradient;
+    }
 
-    energy          sensibleEnthalpy;
+    upperWall
+    {
+        type            epsilonWallFunction;
+        value           uniform 14.855;
+    }
+
+    lowerWall
+    {
+        type            epsilonWallFunction;
+        value           uniform 14.855;
+    }
+
+    frontAndBack
+    {
+        type            epsilonWallFunction;
+        value           uniform 14.855;
+    }
 }
 
-mixture
-{
-    specie
-    {
-        molWeight   0.040;
-    }
-    equationOfState
-    {
-        rho0        1200;
-        T0          300;
-        beta        3.6e-4;
-    }
-    thermodynamics
-    {
-        Cp          3470;
-        Hf          1;
-    }
-    transport
-    {
-        mu          0.00185;
-        Pr          9.7;
-    }
-}
 
 // ************************************************************************* //
