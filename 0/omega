@@ -23,8 +23,7 @@ boundaryField
 
     inlet
     {
-        type            inletOutlet;
-        inletValue      $internalField;
+        type           	fixedValue;
         value           $internalField;
     }
 
