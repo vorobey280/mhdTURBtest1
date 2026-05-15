@@ -46,7 +46,8 @@ boundaryField
 
     frontAndBack 
     {
-        type            empty;
+        type            fixedFluxPressure;
+        value           uniform 1e5;
     }
 }
 

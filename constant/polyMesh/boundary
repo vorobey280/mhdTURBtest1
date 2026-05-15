@@ -46,8 +46,8 @@ FoamFile
     }
     frontAndBack
     {
-        type            empty;
-        inGroups        1(empty);
+        type            wall;
+        inGroups        1(wall);
         nFaces          200000;
         startFace       201100;
     }

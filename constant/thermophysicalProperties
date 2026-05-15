@@ -34,23 +34,23 @@ mixture
 {
     specie
     {
-        molWeight   1;
+        molWeight   0.040;
     }
     equationOfState
     {
-        rho0        1;
-        T0          1;
-        beta        1e-4;
+        rho0        1200;
+        T0          300;
+        beta        3.6e-4;
     }
     thermodynamics
     {
-        Cp          1;
-        Hf          1;
+        Cp          3470;
+        Hf          0;
     }
     transport
     {
-        mu          1;
-        Pr          1;
+        mu          0.00185;
+        Pr          9.7;
     }
 }
 

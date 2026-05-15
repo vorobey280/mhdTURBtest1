@@ -47,7 +47,8 @@ boundaryField
 
     frontAndBack
     {
-        type            empty;
+        type            nutUWallFunction;
+        value           uniform 0;
     }
 
 }

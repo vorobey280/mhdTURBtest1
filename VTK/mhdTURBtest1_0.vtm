@@ -8,6 +8,7 @@
       <DataSet name='outlet' file='mhdTURBtest1_0/boundary/outlet.vtp' />
       <DataSet name='lowerWall' file='mhdTURBtest1_0/boundary/lowerWall.vtp' />
       <DataSet name='upperWall' file='mhdTURBtest1_0/boundary/upperWall.vtp' />
+      <DataSet name='frontAndBack' file='mhdTURBtest1_0/boundary/frontAndBack.vtp' />
     </Block>
   </vtkMultiBlockDataSet>
   <FieldData>
