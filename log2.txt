@@ -1,0 +1,205 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2512                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _87ed40d256-20251219 OPENFOAM=2512 version=v2512
+Arch   : "LSB;label=32;scalar=64"
+Exec   : magnetoHDFoam -parallel
+Date   : May 15 2026
+Time   : 14:25:45
+Host   : Raf
+PID    : 969737
+I/O    : uncollated
+Case   : /home/Raf/OpenFOAM/run/mhdTURBtest1
+nProcs : 12
+Hosts  :
+(
+    (Raf 12)
+)
+Pstream initialized with:
+    node communication : off [type=host] (12 ranks, 1 nodes)
+    topology controls  : none
+    consensus exchange : 0 (tuning: 0)
+    exchange algorithm : 0
+    commsType          : nonBlocking
+    polling iterations : 0
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+memory pool : not available
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+
+PIMPLE: Operating solver in PISO mode
+
+
+PISO: Operating solver in PISO mode
+
+
+BPISO: Operating solver in PISO mode
+
+Reading thermophysical properties
+
+Selecting thermodynamics package 
+{
+    type            heRhoThermo;
+    mixture         pureMixture;
+    transport       const;
+    thermo          hConst;
+    equationOfState Boussinesq;
+    specie          specie;
+    energy          sensibleEnthalpy;
+}
+
+Reading field U
+
+Reading/calculating face flux field phi
+
+Creating turbulence model
+
+Selecting turbulence model type RAS
+Selecting RAS turbulence model kOmegaSST
+Selecting patchDistMethod meshWave
+RAS
+{
+    model           kOmegaSST;
+    turbulence      on;
+    printCoeffs     on;
+    alphaK1         0.85;
+    alphaK2         1;
+    alphaOmega1     0.5;
+    alphaOmega2     0.856;
+    gamma1          0.555556;
+    gamma2          0.44;
+    beta1           0.075;
+    beta2           0.0828;
+    betaStar        0.09;
+    a1              0.31;
+    b1              1;
+    c1              10;
+    F3              false;
+    decayControl    false;
+    kInf            0;
+    omegaInf        0;
+}
+
+
+Reading g
+
+Reading hRef
+Calculating field g.h
+
+Reading field p_rgh
+
+Creating field dpdt
+
+Creating field kinetic energy K
+
+No MRF models present
+
+No finite volume options present
+Reading field pB
+
+Reading field B
+
+Calculating face flux phiB
+
+Reading transportProperties
+
+Courant Number mean: 1.5e-05 max: 0.015
+
+Starting time loop
+
+Courant Number mean: 1.5e-05 max: 0.015
+Time = 0.0001
+
+PIMPLE: iteration 1
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 1, Final residual = 0.0886347, No Iterations 1000
+smoothSolver:  Solving for Uy, Initial residual = 1, Final residual = 0.107759, No Iterations 1000
+smoothSolver:  Solving for Uz, Initial residual = 0.999983, Final residual = 0.0509844, No Iterations 1000
+smoothSolver:  Solving for h, Initial residual = 1, Final residual = 0.106094, No Iterations 1000
+smoothSolver:  Solving for p_rgh, Initial residual = 0.999928, Final residual = 0.891449, No Iterations 1000
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 3.10275e-05, global = 2.99849e-05, cumulative = 2.99849e-05
+smoothSolver:  Solving for omega, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for k, Initial residual = 1, Final residual = 0.0689648, No Iterations 1000
+smoothSolver:  Solving for Bx, Initial residual = 1, Final residual = 7.82732e-05, No Iterations 1000
+smoothSolver:  Solving for By, Initial residual = 1, Final residual = 0.0144803, No Iterations 1000
+smoothSolver:  Solving for Bz, Initial residual = 0.775224, Final residual = 0.000208827, No Iterations 1000
+DICPCG:  Solving for pB, Initial residual = 1, Final residual = 9.3545e-06, No Iterations 847
+magnetic flux divergence error = 4.26874e-11
+smoothSolver:  Solving for Bx, Initial residual = 0.000848225, Final residual = 9.94544e-06, No Iterations 470
+smoothSolver:  Solving for By, Initial residual = 0.000571735, Final residual = 1.22492e-05, No Iterations 1000
+smoothSolver:  Solving for Bz, Initial residual = 0.000117368, Final residual = 9.99597e-06, No Iterations 636
+DICPCG:  Solving for pB, Initial residual = 0.0119198, Final residual = 9.88947e-06, No Iterations 98
+magnetic flux divergence error = 9.2578e-11
+smoothSolver:  Solving for Bx, Initial residual = 2.22484e-05, Final residual = 9.92981e-06, No Iterations 83
+smoothSolver:  Solving for By, Initial residual = 1.23091e-05, Final residual = 9.96458e-06, No Iterations 55
+smoothSolver:  Solving for Bz, Initial residual = 1.00042e-05, Final residual = 9.95708e-06, No Iterations 1
+DICPCG:  Solving for pB, Initial residual = 5.69781e-05, Final residual = 8.61456e-06, No Iterations 29
+magnetic flux divergence error = 8.16079e-11
+ExecutionTime = 3.05 s  ClockTime = 3 s
+
+Courant Number mean: 0.000236075 max: 0.0457075
+Time = 0.0002
+
+PIMPLE: iteration 1
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.997901, Final residual = 9.84751e-09, No Iterations 97
+smoothSolver:  Solving for Uy, Initial residual = 0.999783, Final residual = 8.73538e-09, No Iterations 100
+smoothSolver:  Solving for Uz, Initial residual = 0.611864, Final residual = 8.66412e-09, No Iterations 92
+smoothSolver:  Solving for h, Initial residual = 0.441659, Final residual = 9.59516e-09, No Iterations 84
+smoothSolver:  Solving for p_rgh, Initial residual = 0.975034, Final residual = 0.20305, No Iterations 1000
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 0.00812934, global = 2.99762e-05, cumulative = 5.99611e-05
+smoothSolver:  Solving for omega, Initial residual = 0, Final residual = 0, No Iterations 0
+[3] [stack trace]
+[3] =============
+[3] #1  Foam::sigFpe::sigHandler(int) in /opt/OpenFOAM/OpenFOAM-v2512/platforms/linux64GccDPInt32Opt/lib/libOpenFOAM.so
+[3] #2  ? in /usr/lib/libc.so.6
+[3] #3  Foam::symGaussSeidelSmoother::smooth(Foam::word const&, Foam::Field<double>&, Foam::lduMatrix const&, Foam::Field<double> const&, Foam::FieldField<Foam::Field, double> const&, Foam::UPtrList<Foam::lduInterfaceField const> const&, unsigned char, int) in /opt/OpenFOAM/OpenFOAM-v2512/platforms/linux64GccDPInt32Opt/lib/libOpenFOAM.so
+[3] #4  Foam::symGaussSeidelSmoother::smooth(Foam::Field<double>&, Foam::Field<double> const&, unsigned char, int) const in /opt/OpenFOAM/OpenFOAM-v2512/platforms/linux64GccDPInt32Opt/lib/libOpenFOAM.so
+[3] #5  Foam::smoothSolver::solve(Foam::Field<double>&, Foam::Field<double> const&, unsigned char) const in /opt/OpenFOAM/OpenFOAM-v2512/platforms/linux64GccDPInt32Opt/lib/libOpenFOAM.so
+[3] #6  Foam::fvMatrix<double>::solveSegregated(Foam::dictionary const&) in /opt/OpenFOAM/OpenFOAM-v2512/platforms/linux64GccDPInt32Opt/lib/libfiniteVolume.so
+[3] #7  Foam::fvMatrix<double>::solveSegregatedOrCoupled(Foam::dictionary const&) in /opt/OpenFOAM/OpenFOAM-v2512/platforms/linux64GccDPInt32Opt/lib/libfiniteVolume.so
+[3] #8  Foam::fvMesh::solve(Foam::fvMatrix<double>&, Foam::dictionary const&) const in /opt/OpenFOAM/OpenFOAM-v2512/platforms/linux64GccDPInt32Opt/lib/libfiniteVolume.so
+[3] #9  Foam::SolverPerformance<double> Foam::solve<double>(Foam::tmp<Foam::fvMatrix<double> > const&) in /opt/OpenFOAM/OpenFOAM-v2512/platforms/linux64GccDPInt32Opt/lib/libfiniteVolume.so
+[3] #10  Foam::kOmegaSSTBase<Foam::eddyViscosity<Foam::RASModel<Foam::EddyDiffusivity<Foam::ThermalDiffusivity<Foam::CompressibleTurbulenceModel<Foam::fluidThermo> > > > > >::correct() in /opt/OpenFOAM/OpenFOAM-v2512/platforms/linux64GccDPInt32Opt/lib/libcompressibleTurbulenceModels.so
+[3] #11  ? in ~/OpenFOAM/Raf-v2512/platforms/linux64GccDPInt32Opt/bin/magnetoHDFoam
+[3] #12  ? in /usr/lib/libc.so.6
+[3] #13  __libc_start_main in /usr/lib/libc.so.6
+[3] #14  ? in ~/OpenFOAM/Raf-v2512/platforms/linux64GccDPInt32Opt/bin/magnetoHDFoam
+[3] =============
+[Raf:969740] *** Process received signal ***
+[Raf:969740] Signal: Floating point exception (8)
+[Raf:969740] Signal code:  (-6)
+[Raf:969740] Failing at address: 0x3e8000ecc0c
+[Raf:969740] [ 0] /usr/lib/libc.so.6(+0x3e8f0) [0x76f21b63e8f0]
+[Raf:969740] [ 1] /usr/lib/libc.so.6(+0x9a29c) [0x76f21b69a29c]
+[Raf:969740] [ 2] /usr/lib/libc.so.6(gsignal+0x20) [0x76f21b63e7d0]
+[Raf:969740] [ 3] /usr/lib/libc.so.6(+0x3e8f0) [0x76f21b63e8f0]
+[Raf:969740] [ 4] /opt/OpenFOAM/OpenFOAM-v2512/platforms/linux64GccDPInt32Opt/lib/libOpenFOAM.so(_ZN4Foam22symGaussSeidelSmoother6smoothERKNS_4wordERNS_5FieldIdEERKNS_9lduMatrixERKS5_RKNS_10FieldFieldIS4_dEERKNS_8UPtrListIKNS_17lduInterfaceFieldEEEhi+0x32e) [0x76f21c64a08e]
+[Raf:969740] [ 5] /opt/OpenFOAM/OpenFOAM-v2512/platforms/linux64GccDPInt32Opt/lib/libOpenFOAM.so(_ZNK4Foam22symGaussSeidelSmoother6smoothERNS_5FieldIdEERKS2_hi+0x38) [0x76f21c64a318]
+[Raf:969740] [ 6] /opt/OpenFOAM/OpenFOAM-v2512/platforms/linux64GccDPInt32Opt/lib/libOpenFOAM.so(_ZNK4Foam12smoothSolver5solveERNS_5FieldIdEERKS2_h+0x556) [0x76f21c63b5e6]
+[Raf:969740] [ 7] /opt/OpenFOAM/OpenFOAM-v2512/platforms/linux64GccDPInt32Opt/lib/libfiniteVolume.so(_ZN4Foam8fvMatrixIdE15solveSegregatedERKNS_10dictionaryE+0x582) [0x76f223498d82]
+[Raf:969740] [ 8] /opt/OpenFOAM/OpenFOAM-v2512/platforms/linux64GccDPInt32Opt/lib/libfiniteVolume.so(_ZN4Foam8fvMatrixIdE24solveSegregatedOrCoupledERKNS_10dictionaryE+0x4f3) [0x76f222714ee3]
+[Raf:969740] [ 9] /opt/OpenFOAM/OpenFOAM-v2512/platforms/linux64GccDPInt32Opt/lib/libfiniteVolume.so(_ZNK4Foam6fvMesh5solveERNS_8fvMatrixIdEERKNS_10dictionaryE+0x21) [0x76f2226b41c1]
+[Raf:969740] [10] /opt/OpenFOAM/OpenFOAM-v2512/platforms/linux64GccDPInt32Opt/lib/libfiniteVolume.so(_ZN4Foam5solveIdEENS_17SolverPerformanceIT_EERKNS_3tmpINS_8fvMatrixIS2_EEEE+0xcf) [0x76f22287e4bf]
+[Raf:969740] [11] /opt/OpenFOAM/OpenFOAM-v2512/platforms/linux64GccDPInt32Opt/lib/libcompressibleTurbulenceModels.so(_ZN4Foam13kOmegaSSTBaseINS_13eddyViscosityINS_8RASModelINS_15EddyDiffusivityINS_18ThermalDiffusivityINS_27CompressibleTurbulenceModelINS_11fluidThermoEEEEEEEEEEEE7correctEv+0x14ae) [0x76f21f22971e]
+[Raf:969740] [12] magnetoHDFoam(+0x40846) [0x555ec2b6b846]
+[Raf:969740] [13] /usr/lib/libc.so.6(+0x27741) [0x76f21b627741]
+[Raf:969740] [14] /usr/lib/libc.so.6(__libc_start_main+0x89) [0x76f21b627879]
+[Raf:969740] [15] magnetoHDFoam(+0x451a5) [0x555ec2b701a5]
+[Raf:969740] *** End of error message ***
+--------------------------------------------------------------------------
+prterun noticed that process rank 3 with PID 969740 on node Raf exited on
+signal 8 (Floating point exception).
+--------------------------------------------------------------------------
