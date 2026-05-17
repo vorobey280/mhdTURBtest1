@@ -9,9 +9,7 @@ FoamFile
 {
     version     2.0;
     format      ascii;
-    arch        "LSB;label=32;scalar=64";
-    class       dictionary;
-    location    "0";
+    class       volScalarField;
     object      alphat;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
@@ -50,7 +48,9 @@ boundaryField
 
     frontAndBack
     {
-        type            empty;
+        type            compressible::alphatWallFunction;
+        Prt             0.85;
+        value           uniform 0;
     }
 }
 

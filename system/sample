@@ -29,8 +29,8 @@ sets
     {
         type    uniform;
         axis    distance;
-        start   (10.001 -1 0.01);
-        end     (10.001 1 0.01);
+        start   (0.501 -0.018 0.096);
+        end     (0.501 0.018 0.096);
         nPoints 100;
     }
 }

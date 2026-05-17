@@ -27,12 +27,19 @@ solvers
     pFinal
     {
         $p;
-        relTol          0;
+        reltol          0;
+    }
+
+    rho
+    {
+        solver          PCG;
+        preconditioner  DIC;
+        tolerance       1e-06;
+        relTol          0.05;
     }
 
     rhoFinal
     {
-        solver          PCG;
         $rho;
         relTol          0;
     }
@@ -54,8 +61,8 @@ solvers
     {
         solver          smoothSolver;
         smoother        symGaussSeidel;
-        tolerance       1e-05;
-        relTol          0;
+        tolerance       1e-08;
+        relTol          0.1;
     }
     
     UFinal
@@ -66,6 +73,23 @@ solvers
         relTol          0;
     }
 
+    BFinal
+    {
+        solver          smoothSolver;
+        smoother        symGaussSeidel;
+        $B;
+        tolerance       1e-05;
+        relTol          0;
+    }
+
+    h
+    {
+        solver          smoothSolver;
+        smoother        symGaussSeidel;
+        tolerance       1e-08;
+        relTol          0.1;
+    }
+ 
     hFinal
     {
         solver          smoothSolver;
@@ -74,6 +98,14 @@ solvers
         relTol          0;
     }
 
+    p_rgh
+    {
+        solver          smoothSolver;
+        smoother        symGaussSeidel;
+        tolerance       1e-08;
+        relTol          0.1;
+    }
+ 
     p_rghFinal
     {
         solver          smoothSolver;
@@ -83,6 +115,16 @@ solvers
         relTol          0;
     }
 
+    omega
+    {
+        //solver          smoothSolver;
+        //smoother        symGaussSeidel;
+				solver          PBiCGStab;
+        preconditioner  DILU;
+        tolerance       1e-05;
+        relTol          0.1;
+    }
+ 
     omegaFinal
     {
         solver          smoothSolver;
@@ -92,6 +134,32 @@ solvers
         relTol          0;
     }
 
+    epsilon
+    {
+        solver          smoothSolver;
+        smoother        symGaussSeidel;
+        tolerance       1e-05;
+        relTol          0.1;
+    }
+ 
+    epsilonFinal
+    {
+        solver          smoothSolver;
+        smoother        symGaussSeidel;
+        $epsilon;
+        tolerance       1e-05;
+        relTol          0;
+    }
+
+
+    k
+    {
+        solver          smoothSolver;
+        smoother        symGaussSeidel;
+        tolerance       1e-05;
+        relTol          0.1;
+    }
+ 
     kFinal
     {
         solver          smoothSolver;
