@@ -1,7 +1,7 @@
 # Приветствую!
 Это мои первые попытки с реализацию задачи турбулентного МГД течения 
 
-В качестве солвера используется https://github.com/ERMETE-Lab/MHD-magnetoHDFoam/
+В качестве солвера используется https://github.com/ERMETE-Lab/MHD-magnetoHDFoam/ (MIT License)
 
 Данная работа посвящена численному моделированию турбулентного
 течения модельного теплоносителя в поперечном магнитном поле.
@@ -15,7 +15,7 @@ Re=7000-15000 в прямоугольном канале (100х40 мм, длин
 
 This is my first attempt at CFD of turbulent MHD flow case.
 
-The solver used is https://github.com/ERMETE-Lab/MHD-magnetoHDFoam/
+The solver used is https://github.com/ERMETE-Lab/MHD-magnetoHDFoam/ (MIT License)
 
 This work is devoted to the numerical simulation of turbulent
 flow of a model coolant in a transverse magnetic field.
