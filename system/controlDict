@@ -24,11 +24,11 @@ stopAt          endTime;
 
 endTime         1;
 
-deltaT          1e-3;
+deltaT          1e-4;
 
 writeControl    timeStep;
 
-writeInterval   100;
+writeInterval   1000;
 
 purgeWrite      0;
 
