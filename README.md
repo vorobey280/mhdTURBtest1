@@ -1,5 +1,6 @@
 # Приветствую!
-Это мои первые попытки с реализацию задачи турбулентного МГД течения 
+
+Тут были мои первые попытки в решение задачи об МГД течении с теплообменом. Теперь решение переехало в репозиторий https://github.com/vorobey280/mhdchtFoam
 
 В качестве солвера используется https://github.com/ERMETE-Lab/MHD-magnetoHDFoam/ (MIT License)
 
@@ -13,7 +14,7 @@ Re=7000-15000 в прямоугольном канале (100х40 мм, длин
 
 # Greetings!
 
-This is my first attempt at CFD of turbulent MHD flow case.
+Here were my first attempts at solving a problem about MHD flow with heat transfer. The solution has now been moved to the repository https://github.com/vorobey280/mhdchtFoam
 
 The solver used is https://github.com/ERMETE-Lab/MHD-magnetoHDFoam/ (MIT License)
 
