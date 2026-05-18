@@ -2,6 +2,15 @@
   "file-series-version" : "1.0",
   "files" : [
     { "name" : "mhdTURBtest1_0.vtm", "time" : 0 },
-    { "name" : "mhdTURBtest1_1000.vtm", "time" : 0.1 }
+    { "name" : "mhdTURBtest1_1000.vtm", "time" : 0.1 },
+    { "name" : "mhdTURBtest1_2000.vtm", "time" : 0.2 },
+    { "name" : "mhdTURBtest1_3000.vtm", "time" : 0.3 },
+    { "name" : "mhdTURBtest1_4000.vtm", "time" : 0.4 },
+    { "name" : "mhdTURBtest1_5000.vtm", "time" : 0.5 },
+    { "name" : "mhdTURBtest1_6000.vtm", "time" : 0.6 },
+    { "name" : "mhdTURBtest1_7000.vtm", "time" : 0.7 },
+    { "name" : "mhdTURBtest1_8000.vtm", "time" : 0.8 },
+    { "name" : "mhdTURBtest1_9000.vtm", "time" : 0.9 },
+    { "name" : "mhdTURBtest1_10000.vtm", "time" : 1 }
   ]
 }
